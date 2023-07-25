@@ -1,0 +1,103 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ExtensionLayout from '../../components/view-extension/ExtensionLayout.astro';
+import InputEye from '../../components/view-extension/InputEye.astro';
+import Menue from '../../components/view-extension/Menue.astro';
+---
+
+
+<BaseLayout betweenMainAndFooterClass="grow" mainClass="w-4/5 gap-16 place-content-center text-center items-center self-center mt-24 flex flex-col">
+
+    <ExtensionLayout>
+        <svg class="self-center my-8" width="300px" height="300px" viewBox="0 0 512 512"><path fill="#4FDAB8" d="M329.125 20.5l-3.72 9.625c-7.204 18.77-32.286 34.72-63.624 34.72-31.538 0-56.586-16.223-63.624-35.22l-2.25-6.094h-8.687l-1.97.97C111.456 61.1 60.844 148.48 60.844 249.313c0 132.906 89.104 242.78 200.937 242.78 111.835 0 200.283-109.904 200.283-242.78 0-100.493-50.352-187.376-123.72-224.188l-9.218-4.625zM185.28 45.78c13.738 23.13 43.113 37.782 76.5 37.782 33.14 0 62.43-14.33 76.345-37.187 61.527 35.396 105.25 112.692 105.25 202.938 0 124.622-82.108 224.093-181.594 224.093-99.485 0-182.217-99.5-182.217-224.094 0-90.54 43.907-168.274 105.718-203.53zm-4.78 27.75c-11.36 8.202-21.867 18.068-31.28 29.376l60.374 78.844h102.311l60.375-78.875c-9.063-10.883-19.12-20.456-30-28.47-18.174 18.622-47.482 30.72-80.5 30.72-33.52 0-63.174-12.487-81.28-31.594zm-42.906 44.907c-23.987 35.515-38.47 81.505-38.47 131.782 0 2.038.047 4.068.095 6.093h53.436L196 194.75l-58.406-76.313zm246.312 0L325.5 194.75l43.344 61.563h53.47c.046-2.025.092-4.055.092-6.094 0-50.28-14.51-96.267-38.5-131.782zm-169.062 82l-44.22 62.813 44.22 62.844h91.812l44.22-62.844-44.22-62.813h-91.812zM100.344 275c4.55 47.216 21.928 89.423 47.625 120.97l48.53-63.44L156.03 275h-55.686zm265.125 0L325 332.53l48.563 63.44c25.696-31.547 43.075-73.754 47.625-120.97h-55.72zm-154.783 69.78l-50 65.314c27.524 27.363 62.274 43.687 100.063 43.687 37.79 0 72.57-16.323 100.094-43.686l-50-65.313H210.688z"/></svg>
+        <InputEye id="1" />
+        <button class="flex gap-2 mt-12 text-center place-content-center items-center w-fit self-center m-4 p-4 text-2xl font-bold bg-[#4FDAB8] text-black border-none rounded-xl cursor-pointer hover:scale-105 hover:bg-opacity-70 duration-300">
+            <p class="flex">Unlock Vowlt</p>
+            <svg class="flex" height="30px" width="30px" fill="black" viewBox="0 0 512 512" >
+                <path d="M417.295,170.179h-32.839v-41.716c0.008-35.405-14.405-67.66-37.624-90.839 C323.652,14.413,291.397-0.016,255.992,0c-35.398-0.016-67.652,14.413-90.832,37.624c-23.211,23.18-37.632,55.434-37.617,90.839 v41.716H94.697c-21.198,0-38.375,17.186-38.375,38.375v121.759C56.322,430.654,145.724,512,255.999,512 c110.276,0,199.678-81.346,199.678-181.687V208.554C455.678,187.365,438.493,170.179,417.295,170.179z M270.548,341.836 l11.704,50.025H229.74l11.704-50.033c-14.39-5.773-24.554-19.831-24.554-36.282c0-21.6,17.509-39.109,39.102-39.109 c21.608,0,39.117,17.509,39.117,39.109C295.109,321.997,284.929,336.055,270.548,341.836z M339.328,170.179H172.671v-41.716 c0.008-23.093,9.288-43.777,24.404-58.933c15.148-15.116,35.84-24.388,58.917-24.404c23.084,0.016,43.784,9.296,58.933,24.404 c15.108,15.156,24.388,35.84,24.403,58.933V170.179z"/>
+            </svg>
+         </button>
+    </ExtensionLayout>
+
+
+    <ExtensionLayout>
+        <Menue/>
+    </ExtensionLayout>
+
+
+
+    <div class="bg-neutral-900 flex flex-col w-[400px] h-[600px] min-h-full border border-solid rounded-xl">
+        <div class="flex top-0 left-0 right-0 mb-2 w-full bg-neutral-700 rounded-t-xl">
+            <button class="flex rounded-xl m-1 bg-transparent cursor-pointer hover:scale-105 duration-300 hover:bg-red-800 border-none self-center">
+                <svg class="m-1" fill="#fff" width="30px" height="30px" viewBox="0 0 32 32">
+                    <path d="M3.651 16.989h17.326c0.553 0 1-0.448 1-1s-0.447-1-1-1h-17.264l3.617-3.617c0.391-0.39 0.391-1.024 0-1.414s-1.024-0.39-1.414 0l-5.907 6.062 5.907 6.063c0.196 0.195 0.451 0.293 0.707 0.293s0.511-0.098 0.707-0.293c0.391-0.39 0.391-1.023 0-1.414zM29.989 0h-17c-1.105 0-2 0.895-2 2v9h2.013v-7.78c0-0.668 0.542-1.21 1.21-1.21h14.523c0.669 0 1.21 0.542 1.21 1.21l0.032 25.572c0 0.668-0.541 1.21-1.21 1.21h-14.553c-0.668 0-1.21-0.542-1.21-1.21v-7.824l-2.013 0.003v9.030c0 1.105 0.895 2 2 2h16.999c1.105 0 2.001-0.895 2.001-2v-28c-0-1.105-0.896-2-2-2z"></path>
+                </svg>
+            </button>
+            <button class="flex rounded-xl m-1 bg-transparent cursor-pointer hover:scale-105 duration-300 hover:bg-blue-800 border-none self-center">
+                <svg class="m-1" height="30px" width="30px" fill="white" viewBox="0 0 512 512" >
+                    <path d="M417.295,170.179h-32.839v-41.716c0.008-35.405-14.405-67.66-37.624-90.839 C323.652,14.413,291.397-0.016,255.992,0c-35.398-0.016-67.652,14.413-90.832,37.624c-23.211,23.18-37.632,55.434-37.617,90.839 v41.716H94.697c-21.198,0-38.375,17.186-38.375,38.375v121.759C56.322,430.654,145.724,512,255.999,512 c110.276,0,199.678-81.346,199.678-181.687V208.554C455.678,187.365,438.493,170.179,417.295,170.179z M270.548,341.836 l11.704,50.025H229.74l11.704-50.033c-14.39-5.773-24.554-19.831-24.554-36.282c0-21.6,17.509-39.109,39.102-39.109 c21.608,0,39.117,17.509,39.117,39.109C295.109,321.997,284.929,336.055,270.548,341.836z M339.328,170.179H172.671v-41.716 c0.008-23.093,9.288-43.777,24.404-58.933c15.148-15.116,35.84-24.388,58.917-24.404c23.084,0.016,43.784,9.296,58.933,24.404 c15.108,15.156,24.388,35.84,24.403,58.933V170.179z"/>
+                </svg>
+            </button>
+            <input class="flex w-full self-center text-l mx-4 rounded-xl bg-neutral-500 text-white focus:outline-none pl-2" type="text" placeholder="Search comming soon" />
+            <button class="flex rounded-full border-none self-center text-white text-4xl m-1 bg-transparent cursor-pointer hover:scale-105 duration-300 hover:bg-blue-800">
+                +
+            </button>
+        </div>
+
+        <div class="flex flex-col border border-solid rounded-xl mx-2 my-1 px-2 bg-neutral-700 hover:bg-opacity-50 duration-300 cursor-pointer">
+            <p class="text-left text-xl font-bold m-1">Facebook.com</p>
+            <div class="flex flex-row justify-between mx-2 place-content-center items-center mt-0">
+                <p>my_username</p>
+                <div class="flex flex-row place-content-center items-center">
+                    <p>************</p>
+                    <svg class="flex p-2 cursor-pointer hover:scale-105 duration-300" width="20px" height="20px" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="white" d="M12 5C5.63636 5 2 12 2 12C2 12 5.63636 19 12 19C18.3636 19 22 12 22 12C22 12 18.3636 5 12 5Z" /><path stroke="white" d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"/>
+                        <line id="lineVisibility1" stroke="white" x1="1" y1="1" x2="24" y2="24" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col border border-solid rounded-xl mx-2 my-1 px-2 bg-neutral-700 hover:bg-opacity-50 duration-300 cursor-pointer">
+            <p class="text-left text-xl font-bold m-1">Twitter.com</p>
+            <div class="flex flex-row justify-between mx-2 place-content-center items-center mt-0">
+                <p>my_username</p>
+                <div class="flex flex-row place-content-center items-center">
+                    <p>************</p>
+                    <svg class="flex p-2 cursor-pointer hover:scale-105 duration-300" width="20px" height="20px" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="white" d="M12 5C5.63636 5 2 12 2 12C2 12 5.63636 19 12 19C18.3636 19 22 12 22 12C22 12 18.3636 5 12 5Z" /><path stroke="white" d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z"/>
+                        <line id="lineVisibility1" stroke="white" x1="1" y1="1" x2="24" y2="24" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <div class="bg-neutral-900 z-50 backdrop:blur-md flex flex-col w-[400px] h-[600px] min-h-full border border-solid rounded-xl">
+        <div class="bg-neutral-800 m-4 flex flex-col self-center w-[350px] max-h-[350px] min-h-[350px] border border-solid rounded-2xl">
+            <input class="flex w-[90%] h-fit self-center text-2xl m-6 rounded-xl bg-neutral-500 text-white" type="text" placeholder="Website" />
+            <input class="flex w-[90%] h-fit self-center text-2xl m-6 rounded-xl bg-neutral-500 text-white" type="text" placeholder="Login" />
+            <input class="flex w-[90%] h-fit self-center text-2xl m-6 rounded-xl bg-neutral-500 text-white" type="text" placeholder="Enter your password" />
+            <button class="hover:drop-shadow-[0_0_10px_rgba(255,0,255,0.7)] flex text-center items-center place-content-center w-fit self-center m-4 p-4 text-2xl font-bold bg-[#3A0F67] text-white border-none rounded-xl cursor-pointer hover:scale-110 duration-300">Add</button>
+        </div>
+    </div>
+
+
+    <script is:inline>
+        function handleVisibility() {
+            var inputPassword = document.getElementById("password1");
+            var lineVisibility = document.getElementById("lineVisibility1");
+            if (inputPassword.type === "password") {
+                inputPassword.type = "text";
+                lineVisibility.style.display = "none";
+            } else {
+                inputPassword.type = "password";
+                lineVisibility.style.display = "block";
+            }
+            } 
+        document.getElementById("visibility1").addEventListener("click", handleVisibility);
+    </script>
+
+</BaseLayout>

@@ -1,0 +1,43 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import Pierre from '../static/pierre.jpg'
+import Jb from '../static/jb.jpg'
+import Louis from '../static/louis.jpg'
+import Benoit from '../static/benoit.jpg'
+---
+
+<BaseLayout betweenMainAndFooterClass="grow" mainClass="w-[95%] 3xl:w-1/2 place-content-center text-center items-center self-center mt-4 flex flex-col">
+
+    <div class="w-full flex flex-col gap-10 text-center">
+        <h1 class="text-black font-bold text-7xl leading-0 m-0 p-12">Meet the <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#4FD9BC] to-[#52C8E8]">Loaker team</span></h1>
+
+        <div class="flex xl:flex-row flex-col justify-around place-content-center">
+            <div class="flex flex-col items-center gap-4 m-4 border border-solid border-neutral-600 bg-[#4FDAB8] rounded-xl p-4">
+                <img class="rounded-full h-56 w-56" src={Pierre}/>
+                <p class="text-xl font-bold">Pierre <br/> Domachowski</p>
+                <p class="px-2 py-1 mt-2 w-fit rounded-full bg-sky-400 font-bold">COO</p>
+                <a href="https://www.linkedin.com/in/pierre-domachowski/"><svg class="w-8 h-8" viewBox="0 0 16 16"><path fill="#0A66C2" d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"/></svg></a>
+            </div>
+            <div class="flex flex-col items-center gap-4 m-4 border border-solid border-neutral-600 bg-[#4FDAB8] rounded-xl p-4">
+                <img class="rounded-full h-56 w-56" src={Jb}/>
+                <p class="text-xl font-bold">Jean-Baptiste <br/> Col</p>
+                <p class="px-2 py-1 mt-2 w-fit rounded-full bg-sky-400 font-bold">CEO</p>
+                <a href="https://www.linkedin.com/in/jbcol/"><svg class="w-8 h-8" viewBox="0 0 16 16"><path fill="#0A66C2" d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"/></svg></a>
+            </div>
+            <div class="flex flex-col items-center gap-4 m-4 border border-solid border-neutral-600 bg-[#4FDAB8] rounded-xl p-4">
+                <img class="rounded-full h-56 w-56" src={Louis}/>
+                <p class="text-xl font-bold">Louis <br/> Farcot Lafond</p>
+                <p class="px-2 py-1 mt-2 w-fit rounded-full bg-sky-400 font-bold whitespace-nowrap">S.C. developper</p>
+                <a href="https://www.linkedin.com/in/louis-farcot-lafond/"><svg class="w-8 h-8" viewBox="0 0 16 16"><path fill="#0A66C2" d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"/></svg></a>
+            </div>
+            <div class="flex flex-col items-center gap-4 m-4 border border-solid border-neutral-600 bg-[#4FDAB8] rounded-xl p-4">
+                <img class="rounded-full h-56 w-56" src={Benoit}/>
+                <p class="text-xl font-bold">Benoit <br/>Marzelleau</p>
+                <p class="px-2 py-1 mt-2 w-fit rounded-full bg-sky-400 font-bold">CTO</p>
+                <a href="https://www.linkedin.com/in/benoit-marzelleau/"><svg class="w-8 h-8" viewBox="0 0 16 16"><path fill="#0A66C2" d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"/></svg></a>
+            </div>
+        </div>
+    </div>
+
+</BaseLayout>

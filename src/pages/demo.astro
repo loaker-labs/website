@@ -1,0 +1,10 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { Extension } from '@components/Extension';
+---
+
+
+<BaseLayout betweenMainAndFooterClass="grow" mainClass="flex flex-col items-center w-fit mx-auto">
+    <h1 class="text-black font-bold text-7xl leading-0 m-0 p-12"><span class="bg-clip-text text-transparent bg-gradient-to-r from-[#4FD9BC] to-[#52C8E8]">Loaker</span> web extension</h1>
+    <Extension client:load/>
+</BaseLayout>

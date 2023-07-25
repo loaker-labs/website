@@ -1,0 +1,44 @@
+---
+import Header from '../components/Header/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+	mainClass: string;
+	betweenMainAndFooterClass: string;
+}
+const {mainClass, betweenMainAndFooterClass} = Astro.props;
+const navaClass = "xl:hidden no-underline text-2xl text-white font-bold m-8 p-2 h-16 flex items-center place-content-center bg-violet-900 rounded-lg border-solid border-2 border-violet-400";
+---
+
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.png`} />
+		<meta name="generator" content={Astro.generator} />
+		<title>Loaker</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	</head>
+	<body class="flex flex-col bg-white left-0 text-black m-0 min-h-screen w-full">
+		<Header headerclass="place-content-center backdrop-blur-md flex flex-row w-full bg-white border-b border-solid border-zinc-600 border-t-0 border-r-0 border-l-0 top-0 sticky    z-[100]"/>
+		<main class={mainClass}>
+            <slot/>
+		</main>
+		<div class={betweenMainAndFooterClass}></div>
+        <Footer footerclass="flex flex-row w-full bg-white place-content-center border-b border-solid border-zinc-600 border-t-0 border-r-0 border-l-0"/>
+	</body>
+</html>
+
+<style is:global>
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/police.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  font-family: 'Inter', sans-serif;
+}
+</style>

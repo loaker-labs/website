@@ -1,0 +1,132 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Comparator from '../components/Comparator/Comparator.astro';
+import Dioxus from '../components/dioxus.astro';
+import BoxFeatures from '@components/BoxFeatures.astro';
+import Question from '@components/Question.astro';
+
+const boxFeaturesSvgClass = "self-center p-2 border-2 border-solid rounded-xl border-cyan-300 bg-cyan-500 bg-opacity-40"
+---
+
+<BaseLayout betweenMainAndFooterClass="grow" mainClass="flex w-[95%] xl:w-[50%] place-content-center text-center items-center self-center flex-col"> 
+	
+	<div class="w-screen flex flex-col items-center h-fit bg-gradient-to-t from-neutral-800 to-black pb-6 font-bold">
+
+		<h1 class="text-white text-7xl md:text-9xl leading-0 m-0 p-12">Build <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#4FD9BC] to-[#52C8E8]">Safety</span></h1>
+
+		<div class="flex flex-row gap-12 xl:gap-24 m-0 py-12">
+			<a id="ancre" class="flex w-fit bg-white hover:bg-transparent duration-300 hover:text-white border border-solid border-white items-center px-6 py-2 text-black font-bold rounded-md no-underline whitespace-nowrap" href={`${import.meta.env.BASE_URL}extension`}>
+				Get started
+			</a>
+
+			<a class="flex w-fit bg-gradient-to-tl from-[#4FD9BC] to-[#52C8E8] rounded-md drop-shadow-[0_0_40px_rgba(0,255,255,3)] no-underline" href=`${import.meta.env.BASE_URL}demo`>
+				<div class="underline-none inline-flex items-center grow m-[1px] px-6 py-2 bg-black rounded-md text-white font-bold hover:bg-transparent duration-150 whitespace-nowrap">
+					Get a demo
+					<svg width="30px" height="30px" viewBox="0 0 24 24" stroke="white" stroke-width="2">
+						<polyline data-name="Right" fill="none" points="16.4 7 21.5 12 16.4 17" stroke-linecap="round" stroke-linejoin="round"/>
+						<line fill="none" stroke-linecap="round" stroke-linejoin="round" x1="8.5" x2="19.2" y1="12" y2="12"/>
+					</svg>
+				</div>
+			</a>
+		</div>
+
+		<div class="flex text-white m-6 text-2xl xl:text-5xl lg:max-w-[50vw] font-bold place-content-center">
+			Secure data against cyberattacks,<br />thanks to Loaker
+		</div>
+
+	</div>	
+
+	<div class="flex w-screen flex-col xl:flex-row bg-neutral-100 items-center place-content-center py-24">
+		<div class="flex flex-col basis-1/2 xl:basis-1/4">
+			<ul class="list-outside list-[square] marker:text-3xl marker:text-[#4FD9BC] text-xl text-left m-4">
+				<li class="mb-8"><span class="text-2xl font-semibold">Ransomware-resistant</span> by design, as data is stored outside the corporate LAN</li>
+				<li class="mb-8"><span class="text-2xl font-semibold">Cross-platform</span> software where data can be retrieved from any device</li>
+				<li class="mb-8"><span class="text-2xl font-semibold">Transparency</span> since data encryption is publicly verifiable</li>
+				<li class="mb-8"><span class="text-2xl font-semibold">Massive replication</span> of encrypted data to prevent any data loss</li>
+			</ul>
+		</div>
+		<div class="flex w-[90vw] basis-1/2 xl:basis-1/4">
+			<Dioxus/>
+		</div>
+	</div>
+
+
+	<div class="w-full flex flex-col gap-6">
+		<h1 class="text-black font-bold text-5xl md:text-7xl leading-0 m-0 p-12">Key <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#4FD9BC] to-[#52C8E8]">Features</span></h1>
+		
+		<div class="flex flex-col gap-6 w-full">
+			<div class="flex flex-col xl:flex-row gap-6 w-full">
+
+				<BoxFeatures title="Open Source" text="The project is fully open source and available on github.">
+					<a class="hover:scale-110 duration-300 self-center" href="https://github.com/Loaker">
+						<svg class={boxFeaturesSvgClass} height="80px" width="80px" viewBox="0 0 98 96"><path fill-rule="evenodd" fill="#000" clip-rule="evenodd" d="M48.854 0C21.839 0 0 22 0 49.217c0 21.756 13.993 40.172 33.405 46.69 2.427.49 3.316-1.059 3.316-2.362 0-1.141-.08-5.052-.08-9.127-13.59 2.934-16.42-5.867-16.42-5.867-2.184-5.704-5.42-7.17-5.42-7.17-4.448-3.015.324-3.015.324-3.015 4.934.326 7.523 5.052 7.523 5.052 4.367 7.496 11.404 5.378 14.235 4.074.404-3.178 1.699-5.378 3.074-6.6-10.839-1.141-22.243-5.378-22.243-24.283 0-5.378 1.94-9.778 5.014-13.2-.485-1.222-2.184-6.275.486-13.038 0 0 4.125-1.304 13.426 5.052a46.97 46.97 0 0 1 12.214-1.63c4.125 0 8.33.571 12.213 1.63 9.302-6.356 13.427-5.052 13.427-5.052 2.67 6.763.97 11.816.485 13.038 3.155 3.422 5.015 7.822 5.015 13.2 0 18.905-11.404 23.06-22.324 24.283 1.78 1.548 3.316 4.481 3.316 9.126 0 6.6-.08 11.897-.08 13.526 0 1.304.89 2.853 3.316 2.364 19.412-6.52 33.405-24.935 33.405-46.691C97.707 22 75.788 0 48.854 0z" fill="#fff"/></svg>
+					</a>
+				</BoxFeatures>
+
+				<BoxFeatures title="Tezos Based" text="Loaker is based on Tezos, a secure, scalable and sustainable blockchain.">
+					<svg class={boxFeaturesSvgClass} height="80px" width="80px" viewBox="0 0 160 221.62" fill="#000">
+						<path class="st0" d="M158.6,163.5c-2.3-40.7-53.5-59.2-58.4-61.1c-0.2-0.1-0.2-0.3-0.1-0.5l52.8-53v-5.7 c-0.03-0.93-0.77-1.67-1.7-1.7H53.9V9.6l0,0V0L18,7.5v5.4h2c0,0,8.8,0,8.8,8.8v19.7H1c-0.54,0.04-0.96,0.46-1,1v12.5h28.9v67.9 c0,21.3,13.7,36.1,37.7,34.1c4.94-0.49,9.69-2.21,13.8-5c1.81-1.16,2.9-3.15,2.9-5.3v-6.7c-7.8,5.2-14.4,4.9-14.4,4.9 c-15.2,0-14.9-19.3-14.9-19.3V54.9h70l-50.4,50.8c-0.1,6.7-0.2,11.9-0.2,12c-0.02,0.15,0.09,0.28,0.24,0.3c0.02,0,0.04,0,0.06,0 c46.2,7.8,58.7,37.7,58.7,46.4c0,0,5,42.3-37.3,45.2c0,0-27.7,1.2-32.6-9.9c-0.18-0.36-0.02-0.8,0.34-0.97 c0.02-0.01,0.04-0.02,0.06-0.03c4.71-1.97,7.76-6.59,7.7-11.7c0-8.2-5-14.9-15.5-14.9c-8.5,0-15.5,6.7-15.5,14.9 c0,0-4,35.6,55.4,34.6C162.8,220.4,158.6,163.5,158.6,163.5z"></path>
+					</svg>
+				</BoxFeatures>
+
+				<BoxFeatures title="Distributed storage" text="Loaker uses distributed storage and computing to ensure that your data is always available.">
+					<svg class={boxFeaturesSvgClass} width="80px" height="80px" viewBox="0 0 32 32">
+						<defs>
+							<clipPath id="A">
+								<path d="M0 0h32v32H0z"/>
+							</clipPath>
+						</defs>
+						<g clip-path="url(#A)"><path d="M27.551 2.781c-1.24-.005-2.365.727-2.863 1.863s-.274 2.459.57 3.368l-5.192 4.675c-1.841-1.529-4.507-1.543-6.364-.033L9.531 8.477c.256-.416.393-.894.395-1.383a2.69 2.69 0 0 0-4.589-1.902 2.69 2.69 0 0 0 1.902 4.589 2.66 2.66 0 0 0 1.622-.559l4.12 4.127a5.08 5.08 0 0 0-1.242 3.307c0 .115.026.222.034.335l-5.565.721a2.55 2.55 0 0 0-4.797 1.643 2.55 2.55 0 0 0 5.038-.574c0-.031-.008-.059-.009-.09l5.494-.712c.199.741.564 1.428 1.066 2.008l-3.733 4c-.424-.252-.907-.387-1.4-.39-1.138 0-2.164.685-2.6 1.736s-.195 2.261.61 3.066 2.015 1.045 3.066.61 1.736-1.462 1.736-2.6c-.003-.648-.232-1.275-.647-1.772l3.7-3.956c1.578 1.273 3.771 1.461 5.543.476l2.972 2.934a3 3 0 0 0 4.094 4.357 3 3 0 0 0-3.305-4.982l-2.915-2.878c1.06-.854 1.728-2.101 1.854-3.457s-.303-2.704-1.188-3.738l5.281-4.754c.455.257.967.395 1.49.4 1.726 0 3.125-1.399 3.125-3.125s-1.399-3.125-3.125-3.125zM3.886 20.344c-.632 0-1.202-.381-1.444-.965s-.108-1.256.339-1.703 1.119-.581 1.703-.339.965.812.965 1.444c-.001.863-.7 1.562-1.563 1.563zm22.478 5.687a1.94 1.94 0 0 1-3.308 1.372 1.94 1.94 0 0 1 1.37-3.309 1.94 1.94 0 0 1 1.938 1.937zM7.239 8.781a1.69 1.69 0 0 1-1.195-2.882 1.69 1.69 0 0 1 2.882 1.195 1.69 1.69 0 0 1-1.687 1.687zm.625 19.438c-.733 0-1.395-.441-1.676-1.119s-.126-1.457.392-1.976 1.298-.674 1.976-.393 1.119.942 1.119 1.675c-.001 1-.812 1.811-1.812 1.813zm5.875-11.563c0-1.726 1.399-3.125 3.125-3.125s3.125 1.399 3.125 3.125-1.399 3.125-3.125 3.125a3.13 3.13 0 0 1-3.125-3.125zm13.812-8.625c-1.174 0-2.125-.951-2.125-2.125s.951-2.125 2.125-2.125 2.125.951 2.125 2.125a2.13 2.13 0 0 1-2.125 2.125z" fill="#000"/></g>
+					</svg>
+				</BoxFeatures>				
+
+			</div>
+
+			<div class="flex flex-col xl:flex-row gap-6 w-full">
+
+				<BoxFeatures title="Security" text="Loaker uses asymetric encryption to ensure your data is safe and secure.">
+					<svg class={boxFeaturesSvgClass} height="80px" width="80px" viewBox="0 0 32 32" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="M3,26l2.6-4.2c1.5-2.3,4-3.8,6.8-3.8H19v0c0,2.2-1.8,4-4,4h-2"/><path d="M15 22h8l1.2-1.6c1.1-1.5 2.9-2.4 4.8-2.4h0l-2.7 4.8c-1.4 2.6-4.2 4.2-7.1 4.2h0A23.82 23.82 0 0 0 6 31h0m11-9c5.7-2.6 10-6.9 10-17.7-1 .3-2 .5-3.1.5-2.6 0-5.1-1.1-6.9-2.8-1.9 1.8-4.3 2.8-6.9 2.8C9 4.8 8 4.6 7 4.3c0 6.7 1.7 10.9 4.3 13.8"/></svg>
+				</BoxFeatures>
+
+				<BoxFeatures title="Low carbon impact" text="Loaker is built on top of Tezos, a proof-of-stake blockchain really cost eficient.">
+					<svg class={boxFeaturesSvgClass} height="80px" width="80px" fill="#000" stroke="#000" stroke-width="2" viewBox="0 0 96 96">
+						<path d="M69 92H52v-5c0-.55-1.05-15.48 10.21-23.81a23.34 23.34 0 0 0 3.87-3.48l12.94-15a5 5 0 0 1 3-1.68V20a5 5 0 0 1 4.76-5 4.87 4.87 0 0 1 3.59 1.36A5.37 5.37 0 0 1 92 20.23v30a28.7 28.7 0 0 0 .33 4.3c.44 3 .6 8.78-3.37 13.2-5.5 6.15-10.16 10.88-15.09 15.88l-2.17 2.18-2.7 1.75zm-15-2h13v-3.54l3.48-2.28 1.94-2c4.91-5 9.55-9.7 15-15.83 3.43-3.81 3.27-8.88 2.88-11.57a31.15 31.15 0 0 1-.3-4.56v-30a3.33 3.33 0 0 0-1-2.41 2.88 2.88 0 0 0-2.11-.81A3 3 0 0 0 84 20v23.16a5 5 0 0 1 2 1.06h0 0a4.92 4.92 0 0 1 1.72 3.4V48a5 5 0 0 1-1.22 3.27L73.28 66.7a1 1 0 0 1-1.51-1.31L85.1 50a2.93 2.93 0 0 0 .73-2v-.2a3 3 0 0 0-1-2A2.88 2.88 0 0 0 83 45h-.2a3 3 0 0 0-2.24 1L67.62 61a25.54 25.54 0 0 1-4.19 3.78C53.07 72.46 54 86.78 54 86.92zm-9.46 2h-17v-4.46l-2.83-1.89-2-2c-4.93-5-9.59-9.73-15.12-15.89-4-4.42-3.82-10.17-3.37-13.2a30.05 30.05 0 0 0 .32-4.3v-30a5.38 5.38 0 0 1 1.66-3.89A4.86 4.86 0 0 1 9.78 15a4.93 4.93 0 0 1 3.29 1.45A5 5 0 0 1 14.54 20v23.08a5 5 0 0 1 3 1.68l12.94 15a23.34 23.34 0 0 0 3.87 3.48c11.26 8.33 10.25 23.26 10.2 23.89zm-15-2h13v-3c0-.22 1-14.54-9.39-22.2A25.14 25.14 0 0 1 29 61L16 46.06a3 3 0 0 0-2.25-1h-.18a2.93 2.93 0 0 0-1.8.72 3 3 0 0 0-1 2v.23a2.94 2.94 0 0 0 .71 1.99l13.33 15.39a1 1 0 0 1-1.51 1.31L10 51.3A5 5 0 0 1 8.74 48v-.38a5 5 0 0 1 1.72-3.41 4.85 4.85 0 0 1 2.06-1.07V20a3 3 0 0 0-2.88-3 2.84 2.84 0 0 0-2.11.82 3.34 3.34 0 0 0-1 2.41v30a31.13 31.13 0 0 1-.34 4.59c-.4 2.69-.55 7.76 2.88 11.57 5.5 6.13 10.14 10.84 15.05 15.83l1.94 2 3.47 2.28zm29.24-31.14h-.06a1 1 0 0 1-.94-.92c-.06-.08-.48-.5-2.18-.5-4.69 0-8.12-.1-9.39-1.38-1.08-1.07-.48-2.81.1-4.49A10.57 10.57 0 0 0 47 49a10.11 10.11 0 0 0-2.41-.31c-2.41-.15-5.41-.33-6.22-2.76-.29-.88-1.1-1-3.37-.77-1.76.14-3.75.31-5.07-1A5.24 5.24 0 0 1 28 39.75a3.59 3.59 0 0 1 2.14-2.66c1.25-.63 3 0 4.94.79 2.45.93 5.23 2 6.74.48 2.62-2.61 2-4.13 0-6.18a1.78 1.78 0 0 0-2-.57 2.67 2.67 0 0 0-1 .57l-.51.51-5.13-2.57V30a14.87 14.87 0 0 1-2.05-2.64c-1.66-2.76-1-4.38-.16-5.26-.67-.54-3.32-1.27-5.9-1.59a1 1 0 0 1-.86-1.12 1 1 0 0 1 1.11-.86c2.58.32 7 1.14 7.65 3a1.8 1.8 0 0 1-.55 1.93c-1.16 1.16 1.19 4.07 2.06 5l3.62 1.81a5.1 5.1 0 0 1 1.17-.58 3.79 3.79 0 0 1 4 1.05c2.09 2.1 4 5 0 9-2.43 2.43-6 1.06-8.88 0-1.21-.46-2.86-1.09-3.33-.86A1.72 1.72 0 0 0 30 40.07a3.52 3.52 0 0 0 1.32 2.64c.66.66 2.1.54 3.5.42 2-.17 4.59-.38 5.43 2.14.38 1.14 2.63 1.28 4.44 1.39 2 .12 4.3.26 4.3 2.18a11 11 0 0 1-.8 3.38 6.79 6.79 0 0 0-.57 2.45c.78.77 5.64.77 8 .77a4.85 4.85 0 0 1 3.61 1.1 1.91 1.91 0 0 1 .57 1.38 1 1 0 0 1-1.02.94zm-1-1zm0 0zm0 0zM31.09 22.25h0zm0-.26zm26 13.48c-1.36 0-2.56-1.28-3.36-2.29-4.34-5.79-9.18-10.73-10.49-10.73h0a3.3 3.3 0 0 1-3.72.67 5.73 5.73 0 0 1-3.37-4.68c0-1.6 1.83-2.5 3.59-3.37a9.29 9.29 0 0 0 2.19-1.29l-.06-.06a2.88 2.88 0 0 1-.87-2.15C41.09 9 44.3 6 44.67 5.65A1 1 0 1 1 46 7.13c-1.14 1-3 3.16-3 4.49a.86.86 0 0 0 .26.69 2 2 0 0 1 .66 1.76c-.21 1.27-1.72 2-3.32 2.8-.77.38-2.37 1.17-2.48 1.58a3.74 3.74 0 0 0 2.14 2.82 1.3 1.3 0 0 0 1.6-.27 1.88 1.88 0 0 1 1.5-.53c3.35.24 10.54 9.62 12 11.5 1.27 1.58 1.79 1.51 1.8 1.51.43-.06 1-1.68 1.38-2.55a9.91 9.91 0 0 1 1.83-3.41c.45-.45.39-.7.38-.8-.13-.59-1.14-1.92-6.56-4.08-3.39-1.36-3.79-2.63-3.34-4.37.16-.61.22-.81-.25-1.28-1.3-1.3-1.26-2.33-1-3 .56-1.35 2.54-2 6.05-2a3.73 3.73 0 0 0 4-3 1.014 1.014 0 0 1 2 .33 5.77 5.77 0 0 1-6 4.65c-3.09 0-4.09.57-4.2.77h0s0 .26.56.78a3 3 0 0 1 .78 3.21c-.17.64-.27 1 2.14 2 5.07 2 7.39 3.68 7.77 5.54a2.76 2.76 0 0 1-.92 2.61 8.69 8.69 0 0 0-1.37 2.72c-.68 1.75-1.38 3.57-3 3.81a1.67 1.67 0 0 1-.32.06zM67.41 53a1 1 0 0 1-.81-.42 54.54 54.54 0 0 1-3.21-5.46c-.13-.27-.31-.33-1.8 0a9.4 9.4 0 0 1-6.44-.59 2.83 2.83 0 0 1-1.6-3.84c1.1-2.65 6-5.48 8.88-4.51 2.33.77 3.05-.42 4.22-2.76s4.67-2.15 7.47-2l1.06.06a1 1 0 0 1 .95 1 1 1 0 0 1-1 1L74 35.39c-2-.12-5-.31-5.55.87-1.08 2.16-2.56 5.12-6.64 3.76-1.69-.56-5.64 1.53-6.41 3.39-.16.4-.25.83.65 1.28a7.49 7.49 0 0 0 5.19.41c1.38-.26 3.1-.57 4 1.12a53.73 53.73 0 0 0 3 5.19 1 1 0 0 1-.83 1.59z"/>
+						<path d="M48.29,61A27.88,27.88,0,1,1,76.17,33.11,27.92,27.92,0,0,1,48.29,61Zm0-53.76A25.88,25.88,0,1,0,74.17,33.11,25.91,25.91,0,0,0,48.29,7.23Z"/>
+					</svg>
+				</BoxFeatures>
+
+				<BoxFeatures title="GDPR compliant" text="Loaker doesn't keep any data on customers (no KYC) and customers are the true owners of their stored data.">
+					<svg class={boxFeaturesSvgClass} fill="#000000" height="80px" width="80px" viewBox="0 -64 640 640"><path d="M622.3 271.1l-115.2-45c-4.1-1.6-12.6-3.7-22.2 0l-115.2 45c-10.7 4.2-17.7 14-17.7 24.9 0 111.6 68.7 188.8 132.9 213.9 9.6 3.7 18 1.6 22.2 0C558.4 489.9 640 420.5 640 296c0-10.9-7-20.7-17.7-24.9zM496 462.4V273.3l95.5 37.3c-5.6 87.1-60.9 135.4-95.5 151.8zM224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm96 40c0-2.5.8-4.8 1.1-7.2-2.5-.1-4.9-.8-7.5-.8h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c6.8 0 13.3-1.5 19.2-4-54-42.9-99.2-116.7-99.2-212z"/></svg>
+				</BoxFeatures>
+
+			</div>
+		</div>
+
+	</div>   
+
+	<div class="w-full md:flex hidden flex-col gap-6 place-content-center items-center pt-24">
+		<h1 class="text-black font-bold text-5xl xl:text-7xl leading-0 m-0 p-12">Competitive <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#4FD9BC] to-[#52C8E8]">Advantages</span></h1>
+		<Comparator/>
+	</div>
+
+
+	<div class="flex flex-col w-full items-center pt-24 gap-3">
+		<h1 class="text-black font-bold text-5xl md:text-7xl leading-0 m-0 p-12">FAQ</h1>
+		<Question question="Our company uses another password manager. Is it difficult to migrate to Loaker ?" answer="The Loaker team will help you to migrate your data from your old password manager to Loaker. You will be able to import your data in only one transaction to lower fees."/>
+		<Question question="How does Loaker work ?" answer="Loaker is a blockchain based password manager that uses cryptography to safely store your data on Tezos Chain."/>
+		<Question question="Does Loaker requires a KYC ?" answer="No ! You just have to connect your wallet to Loaker and you are ready to go !"/>
+		<Question question="Who is this solution for ?" answer="Loaker is for everyone who wants to keep their data safe and secure. Loaker is also for companies that want to keep their employees data safe and secure."/>
+		<Question question="How much does Loaker cost ?" answer="Loaker is free for everyone. You just have to pay the transaction fees to store your data on the blockchain."/>
+		<Question question="What is the difference between Loaker and other password managers ?" answer="Loaker is a blockchain based password manager that uses cryptography to safely store your data on Tezos Chain."/>
+	</div>
+
+	<div class="flex flex-col text-md items-center w-full py-24">
+		<h1 class="text-black font-bold text-5xl md:text-7xl leading-0 m-0 p-12">Connect <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#4FD9BC] to-[#52C8E8]">with us</span></h1>
+        <div class="flex flex-row w-full justify-between">
+            <svg width="100" class="fill-black hover:fill-indigo-500 hover:scale-110 duration-300 cursor-pointer" viewBox="0 0 160 119"><path d="M135.535 9.96646C125.042 5.24938 113.941 1.89769 102.526 0C101.104 2.46985 99.443 5.7918 98.2974 8.43459C85.9899 6.65652 73.7956 6.65652 61.7143 8.43459C60.5693 5.7924 58.8706 2.46985 57.4356 0C46.0093 1.89857 34.8991 5.25879 24.4012 9.99108C3.51121 40.3216 -2.15192 69.8979 0.679331 99.0557C14.535 108.997 27.9624 115.036 41.1637 118.988C44.4445 114.653 47.3447 110.064 49.8343 105.267C45.0945 103.533 40.5251 101.397 36.1806 98.8827C37.3239 98.0685 38.4403 97.22 39.5281 96.3384C65.8543 108.169 94.4593 108.169 120.472 96.3384C121.564 97.2142 122.68 98.0626 123.819 98.8827C119.467 101.403 114.889 103.544 110.14 105.28C112.644 110.096 115.539 114.69 118.811 119C132.024 115.049 145.464 109.01 159.32 99.0557C162.642 65.2549 153.645 35.95 135.535 9.96646ZM53.4212 81.1242C45.5181 81.1242 39.0368 74.0353 39.0368 65.4032C39.0368 56.771 45.3799 49.6702 53.4212 49.6702C61.4631 49.6702 67.9437 56.7584 67.8056 65.4032C67.8181 74.0353 61.4631 81.1242 53.4212 81.1242ZM106.578 81.1242C98.6749 81.1242 92.1943 74.0353 92.1943 65.4032C92.1943 56.771 98.5368 49.6702 106.578 49.6702C114.62 49.6702 121.101 56.7584 120.962 65.4032C120.962 74.0353 114.62 81.1242 106.578 81.1242Z"></path></svg>
+            <svg width="100" class="fill-black hover:fill-sky-500 hover:scale-110 duration-300 cursor-pointer" viewBox="0 0 160 120"><path d="M160 14.2053C154.009 16.6548 147.654 18.2627 141.146 18.9754C147.924 15.2262 153.129 9.28929 155.579 2.21547C149.136 5.74422 142.086 8.23045 134.735 9.56673C128.747 3.67938 120.216 0 110.774 0C92.6456 0 77.9475 13.5639 77.9475 30.2933C77.9475 32.668 78.2381 34.9798 78.7975 37.1975C51.5163 35.9338 27.3288 23.8736 11.1381 5.54531C8.31312 10.0195 6.69438 15.2239 6.69438 20.775C6.69438 31.2854 12.49 40.5574 21.2975 45.9902C16.0847 45.8396 10.9866 44.5402 6.42875 42.2007C6.42688 42.3276 6.42688 42.4545 6.42688 42.5819C6.42688 57.2596 17.7419 69.5039 32.7581 72.2869C27.9243 73.5001 22.8539 73.6777 17.9344 72.806C22.1113 84.8414 34.2344 93.5995 48.5981 93.8446C37.3638 101.969 23.2094 106.813 7.83063 106.813C5.18062 106.813 2.56813 106.669 0 106.389C14.5269 114.985 31.7813 120 50.3188 120C110.698 120 143.715 73.8385 143.715 33.8066C143.715 32.4926 143.684 31.1862 143.62 29.8872C150.046 25.5998 155.593 20.2894 160 14.2053Z"></path></svg>
+            <svg width="100" class="fill-black hover:fill-[#0A66C2] hover:scale-110 duration-300 cursor-pointer" viewBox="0 0 16 16"><path d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"/></svg>    
+        </div>
+	</div>
+
+</BaseLayout>
