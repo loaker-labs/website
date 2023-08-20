@@ -11,6 +11,9 @@
       ],
       "@pages/*": [
         "src/pages/*"
+      ],
+      "@static/*": [
+        "src/static/*"
       ]
     },
     "jsx": "react-jsx",
