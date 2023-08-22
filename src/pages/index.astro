@@ -6,7 +6,7 @@ import BoxFeatures from '@components/BoxFeatures.astro';
 import Question from '@components/Question.astro';
 import fond1 from '@static/fond1.jpg';
 
-const boxFeaturesSvgClass = "self-center p-2 stroke-blue-400"
+const boxFeaturesSvgClass = "self-center p-2 fill-teal-400" 
 ---
 
 <BaseLayout betweenMainAndFooterClass="grow" mainClass="flex w-[95%] xl:w-[70%] place-content-center text-center items-center self-center flex-col"> 
@@ -35,7 +35,7 @@ const boxFeaturesSvgClass = "self-center p-2 stroke-blue-400"
 			
 	
 			<div class="flex text-neutral-600 m-6 text-lg xl:text-3xl lg:max-w-[50vw] font-bold place-content-center">
-				Protégez vos données d'entreprise grace à Loaker, le gestionnaire de mots de passe intuitife, sécurisé et hautement répliqué.
+				Protégez vos données d'entreprise grace à Loaker, le gestionnaire de mots de passe intuitif, sécurisé et hautement répliqué.
 			</div>
 		</div>
 	</section>	
@@ -44,45 +44,69 @@ const boxFeaturesSvgClass = "self-center p-2 stroke-blue-400"
 	<section class="w-full flex flex-col gap-6">
 		<h1 class="text-black font-bold text-5xl md:text-7xl leading-0 m-0 p-12">Tout ce dont vous avez besoin en un gestionnaire de mots de passes</span></h1>
 		<div class="flex flex-row gap-6 w-full">
-			<BoxFeatures title1="Interface intuitive" title2="Ne perdez plus de temps avec vos mots de passe" text="Loaker doesn't keep any data on customers (no KYC) and customers are the true owners of their stored data.">
-				<svg class={boxFeaturesSvgClass} fill="#000000" height="80px" width="80px" viewBox="0 -64 640 640"><path d="M622.3 271.1l-115.2-45c-4.1-1.6-12.6-3.7-22.2 0l-115.2 45c-10.7 4.2-17.7 14-17.7 24.9 0 111.6 68.7 188.8 132.9 213.9 9.6 3.7 18 1.6 22.2 0C558.4 489.9 640 420.5 640 296c0-10.9-7-20.7-17.7-24.9zM496 462.4V273.3l95.5 37.3c-5.6 87.1-60.9 135.4-95.5 151.8zM224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm96 40c0-2.5.8-4.8 1.1-7.2-2.5-.1-4.9-.8-7.5-.8h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c6.8 0 13.3-1.5 19.2-4-54-42.9-99.2-116.7-99.2-212z"/></svg>
+			<BoxFeatures title1="Intuitif" title2="Ne perdez plus de temps avec vos mots de passe" text="L'interface de Loaker est conçue pour une utilisation fluide et intuitive de la solution tout en limitant les actions de l'utilisateur pour le pousser à ne pas faire d'erreur qui compromettrait la sécurité de l'entreprise. Si vous trouvez quelque chose à y redire, faites le nous savoir, nous sommes à votre écoute pour faire mûrir la solution.">
+				<svg class={boxFeaturesSvgClass} height="160px" width="160px" viewBox="0 -64 640 640"><path d="M316.02.92c4.48-.16 6.9 1.45 7.87 6.08v27c.08 5.04-.63 12.16-7.85 10.53-5.52-1.25-5.03-7.14-5.04-11.53-.01-4.51-.48-25.21.6-27.96 1.04-2.65 2.1-2.98 4.42-4.12zM306 309c2.55 4.97 7.01 7.51 10.47 12 5.52 7.15 7.72 15.08 7.52 24-.32 13.87-9.86 28.09-22.99 32.91-5.89 2.16-9.88 2.16-16 2.09-18.66-.22-34.06-19.22-48-30.4-1.62-1.3-3.75-3.29-6-2.98-2.48.34-4.9 3.68-8 5.03-5.61 2.43-10.9-2.4-9.22-7.65 1.24-3.86 11.31-13.86 15.22-14.84 1.78-.7 3.3-.52 5 0 3.21 1.5 9.13 6.98 12 9.42 6.64 5.66 25.73 23.12 32 26.09 14.48 6.88 31.09-4.52 32.47-19.67 1-10.95-7.01-17.7-14.47-24.13l-43-36.6c-6.61-5.66-13.62-13.69-23-13.16-7.29.41-11.85 5.2-17 9.74l-19 16.56c-3.19 2.68-13 11.57-16 12.73-4.15 1.61-8.93-.56-9.58-5.14-.57-4.02 2.97-6.77 5.6-9.15L193 279.42l20-16.87c9.82-6.33 22.64-7.31 33-1.65 5.75 3.15 12.9 9.7 18 14.1l15 12.59c2.61 2.19 11.52 10.36 14 11.18 3.17 1.05 6.6-1.52 8.91-3.45 5.6-4.68 9.81-12.92 8.41-20.32-2.23-11.75-9.98-15.81-18.32-23l-41-35.08c-7.48-6.25-14.34-13.39-25-10.39-5.25 1.48-10.85 6.89-15 10.47l-25 21.83c-4.13 3.67-11.35 10.58-16.26 3.94-3.61-4.88.8-9.1 4.28-12.19L201 206.95c17.24-15.3 16.51-10.14 26-17.58l20-16.95 44-36.83c10.95-9.19 26.87-19.79 19.2-36.59-.93-2.03-2.17-4.24-3.59-5.96-7.07-8.58-18.85-11.13-28.61-5.68-4.73 2.64-14.45 11.23-19 15.05l-34 28.51-87 72.81-22.56 19.36C105.57 234 101.84 245.52 102 260l.91 10 3.1 41c.16 5.27 2.8 15.55-6.01 15.55-7.85 0-6.74-10.39-7.42-15.55l-1.67-22-2.4-31c-1.08-17.03 7.49-35.94 19.66-47.58 4.94-4.72 21.55-16.96 23.81-21.42 1.21-2.4 1.01-5.37 1.02-8v-70c.03-21.2 6.61-28.44 17.67-45l17.61-26c4.58-6.55 16.11-24.25 20.81-28.91 25.68-25.45 70.05-.69 61.67 34.91-2 8.51-6.43 15.16-11.77 21.96-2.48 3.14-5.65 6.09-9.88 3.85-9.25-4.89 2.35-16.62 5.42-21.81 7.61-12.88 2.09-27.93-11.53-33.79-20.75-8.94-32.21 16.24-41.86 29.79l-18.16 27c-8.84 12.82-15.95 19.6-15.98 36v68l32-25.92c3.5-2.92 12.14-9.44 13.98-13.08 1.72-3.41.97-16.46 1.02-21 .12-9.81 7.15-19.32 13.04-26.95 3-3.88 8.45-6.82 12.09-1.77 2.98 4.12-.18 9.14-2.48 12.72-2.29 3.57-8.12 11.45-9.14 15-.72 2.49-.51 8.17-.51 11l44-36.41c8.07-6.72 15.81-14.5 26-17.84 13.54-4.44 34.4-.66 41 13.25 6.98-2.96 12.32-5.71 20-6.71 15.59-2.04 29.91 4.14 35.45 19.71 1.79 5.01 1.56 8.83 1.55 14l-1.83 23-3.26 41-1.58 23c.93 5.49 8.13 17.99 10.81 24 8.35 18.74 16.61 39.13 16.86 60 .34 29.39-1.74 43.61-13.43 71-2.25 5.28-8.53 25.06-17.14 16.57-5.08-5.01 1.26-15.17 3.57-20.57 7.91-18.46 13.97-35.55 14-56 .03-19.09-3.92-36.47-11.43-54l-16.05-36c-.7-3.25-.56-8.55-.52-12l5.28-64 .81-11c.58-8.42 2.2-12.64-4.42-19.9-6.68-7.32-14.13-6.63-22.67-3.74-2.67.9-6.52 2.23-8.06 4.85-1.3 2.62.2 5.4 0 9.79-.79 9.16-4.43 18.34-11.03 24.83-3.93 3.86-11.42 8.75-13.98 13.17-2.16 3.75-3.76 16.96-4.73 22l-7.4 38-3.2 18c.56 4.69 7.88 9.63 11.4 12.59 8.66 7.27 19.52 14.73 23.91 25.41 6.63 16.16 2.13 38.32-14.91 46zm58.09-294.97c6.09-1.96 11.05 1.28 9.25 7.97L362 43c-1.59 2.77-3.42 6.46-6.1 8.26-5.35 3.58-11.67-.96-10.01-7.26.66-2.51 4.25-8.49 5.69-11 3.35-5.84 7.33-15.04 12.51-18.97zM404 47.74c6.92.51 9.66 6.84 4.72 11.73L392 70.34c-3.15 2.05-8.36 5.82-12 6.37-4.86.74-8.74-2.66-7.67-7.69.83-3.86 4.62-5.76 7.67-7.7 5.95-3.79 17.71-12.11 24-13.58zM284 161c-7.02 2.75-21.42 16.11-28 21.59-4.7 3.91-9.32 6.79-12 12.41l29 21 11-55zM99.23 346.02c4.01-1.41 7.23-1.1 9.46 3.04l3.19 12.94c1.91 7.24 4.41 14.37 7.9 21 7.73 14.68 20.2 28.97 30.62 42 3.11 3.89 11.86 13.88 13.09 18 .6 2.01.51 4.87.51 7v38c-.01 2.42.12 5.65-1.17 7.77-2.38 3.9-8.28 3.9-10.66 0-1.39-2.27-1.17-6.14-1.17-8.77v-31c0-2.17.11-4.95-.56-7-1.24-3.83-10.24-14.25-13.24-18-12.37-15.46-22.11-25.76-30.94-44-4.61-9.52-7.02-17.69-9.06-28-1.07-5.37-2.43-8.88 2.03-12.98zm254.87 43.72c6.91-1.49 10.04 2.66 8.27 9.26-3.95 14.67-17.3 30.85-17.37 46v40c-.01 3.67.15 8.61-2.09 11.72-2.84 3.95-8.4 3.2-10.74-.85-1.38-2.4-1.17-6.15-1.17-8.87v-44c.02-11.14 6.14-21.07 10.69-31 2.8-6.1 6.94-18.89 12.41-22.26z"/></svg>
 			</BoxFeatures>
-			<BoxFeatures title1="Stockage hautement répliqué" title2="N'ayez plus crainte de perdre vos données" text="Loaker uses distributed storage and computing to ensure that your data is always available.">
-				<svg class={boxFeaturesSvgClass} width="80px" height="80px" viewBox="0 0 100 100">
-					<circle cx="15" cy="15" r="5" fill="none" stroke-width="6"/>
-					<circle cx="50" cy="50" r="10" fill="none" stroke-width="6"/>
-					<circle cx="85" cy="25" r="8" fill="none" stroke-width="6"/>
-					<circle cx="85" cy="75" r="7" fill="none" stroke-width="6"/>
-					<circle cx="20" cy="80" r="6" fill="none" stroke-width="6"/>
-					<circle cx="10" cy="50" r="6" fill="none" stroke-width="6"/>
-					<line x1="42" y1="42" x2="20" y2="20" stroke-width="6"/>
-					<line x1="58" y1="54" x2="80" y2="72" stroke-width="6"/>
-					<line x1="42" y1="58" x2="22" y2="76" stroke-width="6"/>
-					<line x1="58" y1="46" x2="78" y2="28" stroke-width="6"/>
-					<line x1="40" y1="50" x2="18" y2="50" stroke-width="6"/>
-					
-				</svg>
+			<BoxFeatures title1="Répliqué" title2="N'ayez plus peur qu'on perde vos données" text="Loaker utilise une technologie très hautement répliquée pour stocker vos mots de passe. Aucune chance qu'on perde vos données !">
+				<svg class={boxFeaturesSvgClass} width="160px" height="160px" viewBox="0 -64 640 640"><path d="M248 6.44c8.68-1.11 17.79-.55 26 2.63 25.78 9.96 36.79 41.6 24.63 65.93-7.39 14.77-20.58 23.26-36.63 25.57-5.78.83-10.31.41-16-.66-40.21-7.62-50.44-60.19-18.99-84.57 6.7-5.19 12.79-7.37 20.99-8.9zm4 25.89c-9.71 2.33-16.59 9.49-17.24 19.67-.85 13.25 10.8 24.87 24.24 22.68 20.31-3.32 24.84-29.2 8-39.69-4.87-3.03-9.47-3.27-15-2.66zM105 62.26c2.36-.12 3.56-.31 6 0 12.14.52 24.32 4.96 32.91 13.78 20.89 21.46 16.75 58.69-8.91 74.49-9.38 5.78-17.35 6.59-28 6.47-33.38-.39-53.7-36.22-41.13-66C73.35 73.29 86.82 65.4 105 62.26zm292 .17c41.41-5.11 67.5 42.24 43.96 75.57-3.51 4.96-7.77 8.92-12.96 12.07-10.56 6.43-17.03 7.07-29 6.93-21.45-.26-39.78-17.17-43.77-38-.39-3.45-.27-8.4 0-12-.17-4.4.43-8.83 1.87-13 6.61-19.11 20.68-28.43 39.9-31.57zM108 88.31c-7.19 1.36-12.84 4.1-16.64 10.69-7.86 13.65.6 31.26 16.64 31.96 3.9.17 7.43-.19 11-1.88 20.39-9.65 13.85-42.18-11-40.77zm292 0c-7.42 1.41-13.48 4.68-17 11.69-6.83 13.59 2.79 30.29 18 30.96 3.47.15 6.78-.09 10-1.49 21.37-9.28 14.23-42.59-11-41.16zM243 153c-3.41 3.21-6.14 5.92-11 6.66-7.97 1.2-14.81-5.77-14.39-13.66.44-8.21 8.89-14.5 14.39-20 5.38-5.38 14.53-16.51 22-17.66 7.01-1.08 11.4 3.13 16 7.66l18.96 19c3.45 3.68 5.54 6.77 5.45 12-.13 7.94-7.53 14.27-15.41 12.47-4.41-1.02-6.83-3.49-10-6.47 0 6.31 1.11 19.81-2.23 24.82-5.18 7.78-18.73 6.81-22.54-1.86-1.93-4.38-1.23-17.57-1.23-22.96zm-69 40c-.1 4.5-.38 9.12-3.57 12.66-5.65 6.29-16.08 5.32-20.69-1.7-1.87-2.86-1.72-5.71-1.74-8.96v-33c.06-4.08.31-7.53 3.39-10.61s6.53-3.33 10.61-3.39h32c3.48.01 6.9-.27 9.96 1.74 7.02 4.61 7.99 15.04 1.7 20.69-3.54 3.19-8.16 3.47-12.66 3.57 5.23 5.23 14.5 12.42 15.21 20 .89 9.53-5.07 14.48-14.21 13.96-7.83-.45-14.69-9.65-20-14.96zm145-19c-4.5-.1-9.12-.38-12.66-3.57-6.29-5.65-5.32-16.08 1.7-20.69 2.86-1.87 5.71-1.72 8.96-1.74h33c4.08.06 7.53.31 10.61 3.39s3.33 6.53 3.39 10.61v32c-.01 3.48.27 6.9-1.74 9.96-4.61 7.02-15.04 7.99-20.69 1.7-3.19-3.54-3.47-8.16-3.57-12.66-3.53 3.53-11.83 12.67-16 14.26-9.68 3.7-19.19-2.75-18.21-13.26.71-7.58 9.98-14.77 15.21-20zm-74 16.44c21.41-2.75 43.39 2.94 58.71 18.73 30.91 31.83 22.21 86.5-17.71 106.46-12.48 6.24-21.52 6.52-35 6.37-26.12-.31-49.64-19.83-57.92-44-3.37-9.84-3.13-15.93-3.08-26 .15-31.61 24.92-56.01 55-61.56zM53 208.71c9.11.2 14.76.7 23 5.19 34.04 18.52 33.32 70.3-3 85.64-7.03 2.96-13.39 4-21 3.72-9.55-.36-16.86-1.98-25-7.36-28.28-18.69-28.24-61.1 0-79.8 9.25-6.12 15.36-6.87 26-7.39zm405 0c10.23.22 15.9.87 25 6.17 31.12 18.12 30.96 65.6-1 82.8-8.13 4.37-15.82 5.91-25 5.58-7.57-.28-13.09-1.18-20-4.63-33.48-16.75-35.06-65.02-2-84.17 7.96-4.61 14.12-5.32 23-5.75zm-209 7.59c-14.42 2.72-26.61 12.55-31.25 26.7-8.15 24.84 9.38 52.68 36.25 53 9.71.11 16.84-.95 25-6.79 25.46-18.22 22.27-57.76-7-70.33-7.34-3.15-15.16-3.36-23-2.58zM153 269c3.21 3.41 5.92 6.14 6.66 11 1.2 7.97-5.77 14.81-13.66 14.39-8.21-.44-14.5-8.89-20-14.39-5.38-5.38-16.51-14.53-17.66-22-1.08-7.01 3.13-11.4 7.66-16l19-18.96c3.68-3.45 6.77-5.54 12-5.45 7.94.13 14.27 7.53 12.47 15.41-1.02 4.41-3.49 6.83-6.47 10 6.31 0 19.81-1.11 24.82 2.23 7.78 5.18 6.81 18.73-1.86 22.54-4.38 1.93-17.57 1.23-22.96 1.23zm206-26c-2.98-3.17-5.45-5.59-6.47-10-1.8-7.88 4.53-15.28 12.47-15.41 5.23-.09 8.32 2 12 5.45L396 242c4.53 4.6 8.74 8.99 7.66 16-1.15 7.47-12.28 16.62-17.66 22-5.5 5.5-11.79 13.95-20 14.39-7.89.42-14.86-6.42-13.66-14.39.74-4.86 3.45-7.59 6.66-11-5.39 0-18.58.7-22.96-1.23-8.67-3.81-9.64-17.36-1.86-22.54 5.01-3.34 18.51-2.23 24.82-2.23zm-306-8.54c-9.05.97-16.78 5.58-19.89 14.54-4.91 14.11 6.79 29.85 21.89 28.47 19.8-1.8 27.15-27.04 10.99-38.83-3.99-2.92-8.15-3.97-12.99-4.18zm405 0c-6.36.68-11.38 2.58-15.66 7.58-12.06 14.08-1.81 35.54 16.66 35.39 14.81-.13 25.1-15.78 19.52-29.43-3.52-8.62-11.53-13.14-20.52-13.54zM193 338c4.5.1 9.12.38 12.66 3.57 7.14 6.41 6.35 22.22-10.66 22.43h-33c-4.08-.06-7.53-.31-10.61-3.39s-3.33-6.53-3.39-10.61v-32c.01-3.48-.27-6.9 1.74-9.96 4.61-7.02 15.04-7.99 20.69-1.7 3.19 3.54 3.47 8.16 3.57 12.66 3.53-3.53 11.83-12.67 16-14.26 9.68-3.7 19.19 2.75 18.21 13.26-.71 7.58-9.98 14.77-15.21 20zm145-19c.1-4.5.38-9.12 3.57-12.66 5.65-6.29 16.08-5.32 20.69 1.7 1.87 2.86 1.72 5.71 1.74 8.96v33c-.06 4.08-.31 7.53-3.39 10.61s-6.53 3.33-10.61 3.39h-32c-3.48-.01-6.9.27-9.96-1.74-7.02-4.61-7.99-15.04-1.7-20.69 3.54-3.19 8.16-3.47 12.66-3.57-5.23-5.23-14.5-12.42-15.21-20-.89-9.53 5.07-14.48 14.21-13.96 7.83.45 14.69 9.65 20 14.96zm-95 40c0-6.31-1.11-19.81 2.23-24.82 5.18-7.78 18.73-6.81 22.54 1.86 1.93 4.38 1.23 17.57 1.23 22.96 3.17-2.98 5.59-5.45 10-6.47 7.88-1.8 15.28 4.53 15.41 12.47.09 5.23-2 8.32-5.45 12L270 396c-4.6 4.53-8.99 8.74-16 7.66-7.47-1.15-16.62-12.28-22-17.66-5.5-5.5-13.95-11.79-14.39-20-.42-7.89 6.42-14.86 14.39-13.66 4.86.74 7.59 3.45 11 6.66zm-142-3.56c9.6-1.23 18.98-.66 28 3.01 28.32 11.54 36.57 48.58 19.07 72.55-8.31 11.39-19.45 16.62-33.07 18.57-5.55.8-8.58.3-14-.65-40.49-7.12-53.08-60.85-20-84.99 6.19-4.52 12.52-7.09 20-8.49zm292 .02c8.18-1.13 19.33-.79 27 2.42 33.77 14.11 40.2 57.09 13 80.94-4.38 3.84-10.41 7.07-16 8.74-4.07 1.22-11.8 2.59-16 2.35-12.35-.7-24.08-5.17-32.91-14-20.43-20.43-16.84-55.22 5.91-72.4 5.64-4.26 12.17-6.53 19-8.05zm-288 25.87c-9.57 2.35-16.82 10.55-16.82 20.67 0 12.53 12.23 23.76 24.82 21.53 17.96-3.18 24.55-25.15 10.96-37.32-5.69-5.09-11.71-5.69-18.96-4.88zm292 .06c-9.22 2.77-15.53 9.8-15.96 19.61-.58 13.31 10.43 24.92 23.96 22.53 18.91-3.35 25.8-27.11 9.96-38.73-5.51-4.05-11.43-4.29-17.96-3.41zm-147 30.04c28.98-3.58 51.65 16.86 53.49 45.57.74 11.58-3.77 24.26-11.41 32.91-4.35 4.92-9.18 8.81-15.08 11.72-7.58 3.74-14.71 4.46-23 4.37-34.26-.4-55.39-37.75-41.11-68 7.42-15.72 20.45-23.83 37.11-26.57zm3 25.89c-6.05 1.38-10.59 3.52-14.36 8.69-11.3 15.48 2.35 36.99 21.36 33.66 13.33-2.33 20.98-17.41 15.64-29.67-3.98-9.12-13.01-13.64-22.64-12.68z"/></svg>
 			</BoxFeatures>				
 
-			<BoxFeatures title1="Security" title2="Mettez vos données en lieu sûr" text="Loaker uses asymetric encryption to ensure your data is safe and secure.">
-				<svg class={boxFeaturesSvgClass} height="80px" width="80px" viewBox="0 0 32 32" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"><path d="M3,26l2.6-4.2c1.5-2.3,4-3.8,6.8-3.8H19v0c0,2.2-1.8,4-4,4h-2"/><path d="M15 22h8l1.2-1.6c1.1-1.5 2.9-2.4 4.8-2.4h0l-2.7 4.8c-1.4 2.6-4.2 4.2-7.1 4.2h0A23.82 23.82 0 0 0 6 31h0m11-9c5.7-2.6 10-6.9 10-17.7-1 .3-2 .5-3.1.5-2.6 0-5.1-1.1-6.9-2.8-1.9 1.8-4.3 2.8-6.9 2.8C9 4.8 8 4.6 7 4.3c0 6.7 1.7 10.9 4.3 13.8"/></svg>
+			<BoxFeatures title1="Sécurisé" title2="Prenez votre sécurité en main" text="Loaker utilise des algorithme avancés de cryptographie pour garder vos mots de passe à l'abri et vous laisse le contrôle entier des clefs de chiffrement pour que personnes, pas même Loaker ou un autre tiers ne puisse accéder à vos données.">
+				<svg class={boxFeaturesSvgClass} height="160px" width="160px" viewBox="0 -64 640 640"><path d="M251 .74c3.2-.77 6.82-1.21 10 0l24 19.13c26.29 19.98 51 35.05 81 48.82 28.97 13.3 59.82 22.07 91 28.31 6.52 1.3 22.42 3.03 26.3 8.13 2.81 3.7 2.69 8.47 2.7 12.87.09 56.72 2.78 102.21-11.88 158-15.72 59.79-50.35 115.44-96.12 156.83-22.69 20.52-43.27 33.22-69 48.98l-32 20-15 9.11c-10.07 4.21-20.72-5.22-29-10.34l-37-23.16-34-22.05C99.6 409.23 55.51 346.52 36.63 271c-4.52-18.06-9.54-43.53-9.63-62l-1-19v-72c.01-4.76-.11-10 3.42-13.72 3.19-3.38 10.08-3.91 14.58-4.93l34-7.23c45.14-10.72 88.33-30.79 127-56.2l30-22.35c4.79-3.99 10.7-10.07 16-12.83zM465 120l-23-4.58c-42.88-9.47-83.98-24.21-122-46.43-15.89-9.29-31.41-19.4-46-30.64-3.36-2.59-14.52-12.72-18-12.72s-14.64 10.13-18 12.72c-14.59 11.24-30.11 21.35-46 30.64-37.95 22.17-79.19 37.03-122 46.43L47 120v70l1 18c.09 18.19 5.84 47.3 10.86 65C78.75 343.19 122.18 403.45 183 444l52 32.68c3.84 2.42 17.34 11.77 21 11.77s17.16-9.35 21-11.77L329 444c60.82-40.55 104.25-100.81 124.14-171 4.94-17.44 10.77-47.1 10.86-65l1-18v-70zM252 55.7c8.9-1.98 12.23 2.21 19 7.15l23 15.73c35.13 21.87 72.22 38.71 112 50.13l23 5.94c4.11.95 8.69 1.75 11.26 5.46 2.01 2.89 1.73 6.54 1.74 9.89.07 45.03 2.36 69.14-8.87 114l-8.2 26c-1.54 3.89-3.57 7.59-7.93 8.69-7.46 1.87-14.27-2.62-13.58-10.69l9.7-32c5.06-19.27 7.65-39.13 7.88-59l1-13v-20c-.01-2.59.35-6.3-1.6-8.28-1.86-1.89-8.61-3.12-11.4-3.87l-24-7.18c-30.68-10.01-57.92-21.63-86-37.67l-28-17.34c-2.73-1.86-11.48-8.62-14-9.1-3.6-.68-9.05 4.38-12 6.42l-28 17.61c-4.59 2.07-10.04 1.98-13.72-1.82-4.46-4.59-3.48-11.06.94-15.25L227 72.67l25-16.97zm-75 46.95c16.6.16 15.01 21.7 0 20.24-11.21-1.09-12.89-17.3 0-20.24zm-36 14.87c14.39-2.14 16.9 11.04 10.77 17.26-3.12 3.16-8.62 4.46-12.77 6.03l-32 9.9c-3.55 1.02-14.13 2.98-15.98 5.72-1.24 1.83-1.02 5.39-1.02 7.57v20l1 15c.03 19.14 3.02 38.49 7.88 57 16.58 63.15 54.76 116.25 109.12 152.49l34 21.32c2.97 1.82 10.9 7.51 14 7.51 3.07 0 16.5-8.99 20-11.13 18.63-11.41 37.51-22.91 54-37.34 10-8.76 18.21-16.92 27.05-26.85 4-4.5 8.08-10.36 14.95-9.43 7.01.96 10.57 7.99 8.28 14.43-2.04 5.72-15.56 19.28-20.28 24-21.86 21.86-45.71 37.53-72 53.4l-28 16.75c-8.57 2.81-20.85-7.33-28-11.83-26.71-16.84-43.32-25.89-68-47.05C116.9 361.88 82.74 299.36 73.27 238c-1.34-8.74-3.26-22.39-3.27-31v-57c.01-4.89-.35-9.05 4.11-12.28 3.21-2.32 17-4.78 21.89-6.14l26-7.58 19-6.48zm173 56.12c17.15-3.45 22.99 6.35 34 17.36 9.41 9.41 18.37 17.54 12.21 32-3.18 7.48-20.64 23.43-27.21 30l-61 61-19 19c-3.67 3.67-7.91 8.48-13 9.99-9.56 2.86-18.9-9.89-25-15.99l-48-48c-7.09-7.09-16.48-14.17-16.96-25-.47-10.62 3.84-14.85 10.96-22 8.96-9 17.2-21.01 31-20.99 4.91 0 7.92.72 12 3.63L228 238c2.63 2.63 6.85 8.45 11 6.37 2.09-1.04 13.47-12.84 16-15.37l37-37c6.48-6.48 13.38-15.11 22-18.36zm7 20.36c-6.16 4.41-16.19 15.19-22 21l-39 39c-4.9 4.9-16.97 19.42-24 18.51-5.16-.68-11.39-7.9-15-11.51-6.75-6.75-23.46-24.32-30-29l-20 21 42 42 24 23 77-77 19-19 5.8-8-4.8-7-13-13zm70.04 123.85c4.04-1.11 8.21-1.19 11.57 1.8 5.82 5.19 3.49 14.9-3.61 17.61-11.55 4.41-20.31-12.08-7.96-19.41z"/></svg>
 			</BoxFeatures>
 		</div>
 	</section> 
 
 	<section class="w-full p-8 flex flex-col bg-neutral-100 bg-opacity-80 border border-neutral-400 mt-96 rounded-[2.25rem] place-content-center">
-		<h1 class="flex text-black font-bold text-5xl md:text-5xl leading-0 m-0 p-12 ">Ne perdez plus de temps avec la gestion de vos accès</h1>
+		<h1 class="flex text-black font-bold text-5xl md:text-5xl leading-0 m-0 p-12 place-self-center">Epargnez votre entreprise</h1>
 		<div class="flex flex-row">
 			<div class="flex flex-col basis-1/2 content-center">
 				<h2 class="text-teal-400 font-bold text-5xl md:text-7xl leading-0 p-12">4.5M$</h2>
-				<p class="text-black text-lg md:text-2xl leading-0 w-full text-left pl-12">C'est le cout moyen ...</p>
+				<p class="text-black text-lg md:text-2xl leading-0 w-full text-left pl-12">C'est le coût moyen engendré par une faille issue de la compromission d'accès dans une entreprise.</p>
 			</div>
 			<div class="flex basis-1/2 place-content-center">
 				<svg viewBox="0 0 100 100" width="400" height="400" stroke="#000" fill="#000">
-					<line x1="1.5" y1="98" x2="98" y2="98" stroke-width="1"/>
-					<line x1="2" y1="2" x2="2" y2="98" stroke-width="1"/>
-					<circle cx="50" cy="50" r="1" stroke="none"/>
+					<line x1="2" y1="98" x2="98" y2="98" stroke-width="0.7"  stroke-linecap="round"/>
+					<line x1="95" y1="99.5" x2="98" y2="98" stroke-width="0.7"  stroke-linecap="round"/>
+					<line x1="95" y1="96.5" x2="98" y2="98" stroke-width="0.7"  stroke-linecap="round"/>
+
+					<line x1="2" y1="2" x2="2" y2="97.5" stroke-width="0.7" stroke-linecap="round"/>
+					<line x1="2" y1="2" x2="0.5" y2="5" stroke-width="0.7" stroke-linecap="round"/>
+					<line x1="3.5" y1="5" x2="2" y2="2" stroke-width="0.7" stroke-linecap="round"/>
+					
+
+					<circle class="peer/1" cx="78" cy="29" r="3" stroke="none" fill="#2dd4bf" fill-opacity="0.5"/>
+					<circle cx="78" cy="29" r="1" stroke="none" fill="#dc2626"/>
+					
+					<circle cx="62" cy="2" r="1" stroke="none"/>
+					<circle cx="60" cy="60" r="1" stroke="none"/>
+					<circle cx="50" cy="27" r="1" stroke="none"/>
+					<circle cx="44" cy="51" r="1" stroke="none"/>
+					<circle cx="27" cy="2" r="1" stroke="none"/>
+					<circle cx="28" cy="77" r="1" stroke="none"/>
+					<circle cx="20" cy="69" r="1" stroke="none"/>
+					<circle cx="12" cy="57" r="1" stroke="none"/>
+					<circle cx="45" cy="70" r="1" stroke="none"/>
+
+					
+					
+				<p class="translate-x-[-200px] translate-y-[-20px] absolute text-[13px] whitespace-nowrap">Coût moyen d'une faille par vecteur d'attaque</p>
+				<p class="translate-x-[180px] translate-y-[400px] absolute text-[13px]">Proportion des failles par vecteur d'attaque</p>
+				<p class="translate-x-[-200px] translate-y-[405px] absolute text-[8px] italic">source: rapport annuel IBM</p>
+				<p class="translate-x-[180px] translate-y-[95px] absolute text-[13px] peer-hover/1:hidden">Identifiants volés</br>ou compromis</p>
+				<p class="translate-x-[150px] translate-y-[230px] absolute text-[13px]">Configuration incorrecte du cloud</p>
+				<p class="translate-x-[110px] translate-y-[-5px] absolute text-[13px]">Hameçonnage</p>
+				<p class="translate-x-[-70px] translate-y-[85px] absolute text-[13px]">Vulnérabilités dans </br>les logiciels tiers</p>
+				<p class="translate-x-[-15px] translate-y-[-15px] absolute text-[13px]">Compromission des </br>e-mails professionnels</p>
+				<p class="translate-x-[-90px] translate-y-[220px] absolute text-[13px]">Ingénierie sociale</p>
+				<p class="translate-x-[-50px] translate-y-[255px] absolute text-[13px]">Perte accidentelle de </br>données ou d'appareils</p>
+				<p class="translate-x-[-35px] translate-y-[300px] absolute text-[13px]">Erreur système</p>
+				<p class="translate-x-[50px] translate-y-[257px] absolute text-[13px]">Compromission de la</br>sécurité physique</p>
+				<p class="translate-x-[-20px] translate-y-[180px] absolute text-[13px]">Initié malveillant</p>
 				</svg>
+				
+
+
 			</div>
 		</div>
 	</section>
@@ -112,15 +136,14 @@ const boxFeaturesSvgClass = "self-center p-2 stroke-blue-400"
 	</div>
 
 
-	<div class="flex flex-col w-full items-center pt-24 gap-5">
+	<section class="flex flex-col w-full items-center pt-24 gap-5">
 		<h1 class="text-black font-bold text-5xl md:text-7xl leading-0 m-0 p-12">FAQ</h1>
-		<Question question="Our company uses another password manager. Is it difficult to migrate to Loaker ?" answer="The Loaker team will help you to migrate your data from your old password manager to Loaker. You will be able to import your data in only one transaction to lower fees."/>
-		<Question question="How does Loaker work ?" answer="Loaker is a blockchain based password manager that uses cryptography to safely store your data on Tezos Chain."/>
-		<Question question="Does Loaker requires a KYC ?" answer="No ! You just have to connect your wallet to Loaker and you are ready to go !"/>
-		<Question question="Who is this solution for ?" answer="Loaker is for everyone who wants to keep their data safe and secure. Loaker is also for companies that want to keep their employees data safe and secure."/>
-		<Question question="How much does Loaker cost ?" answer="Loaker is free for everyone. You just have to pay the transaction fees to store your data on the blockchain."/>
-		<Question question="What is the difference between Loaker and other password managers ?" answer="Loaker is a blockchain based password manager that uses cryptography to safely store your data on Tezos Chain."/>
-	</div>
+		<Question question="Est-il difficile de passer sur Loaker lorsque nous utilisons un autre gestionnaire de mots de passe ?" answer="Oui ! L'équipe Loaker peut, à votre demande, prendre en charge la migration de vos mots de passe."/>
+		<Question question="Comment faire pour changer de gestionnaire de mots de passe si l'offre Loaker ne nous convient pas ?" answer="L'équipe Loaker s'engage à donner une marche à suivre très simple et une accompagnement pour que vous puissiez exporter vos mots de passe vers un autre gestionnaire, par contre nous ne pourrons pas le faire pour vous car nous ne gérons pas vos clefs."/>
+		<Question question="Qu'est-ce qui garantit le bon traitement de nos mots de passe ?" answer="Comme Loaker n'utilise pas de cloud centralisé, vous être vraiment maître de vos mots de passe. Nous vous ferons donc une démonstration de leur bon chiffrement sur Aleph, démonstration que vous pourrez reprendre de votre côté à n'importe quel moment pour vérifier par vous même que tout se passe bien."/>
+		<Question question="Quel accompagnement propose Loaker pour ses clients ?" answer="Loaker propose des rendez-vous tous les mois (ou à fréquence modulable) pour discuter en direct de la solution, des améliorations que vous nous suggérerez et des fonctionnalités que vous aimeriez nous voir développer. A côté de cela et pour les problèmes plus urgents, une hotline directe sera établie entre Loaker et vous pour que vos problèmes soient gérés directement par les personnes compétentes."/>
+		<Question question="Quelle est la vraie plus value de Loaker ?" answer="Avec Loaker, vous n'aurez plus à vous soucier de vos mots de passe. Vous aurez la certitude de leur bon traitement, vos collaborateurs auront même le droit d'oublier leurs mots de passe maîtres sans risquer de perdre leurs accès et sans compromettre leur sécurité pour autant. En rejoignant la communauté Loaker, vous participerez également à la construction d'un produit qui prend réellement en compte vos besoins, sans avoir à changer de prestataire. Et dans l'éventualité où vous voudriez quand même changer de gestionnaire de mots de passe, nous sommes les seuls à pouvoir vous indiquer comment récupérer tous vos mots de passe sans jamais y avoir accès."/>
+	</section>
 
 	<div class="flex flex-col text-md items-center w-full py-24">
 		<h1 class="text-black font-bold text-5xl md:text-7xl leading-0 m-0 p-12">Connect <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#4FD9BC] to-[#52C8E8]">with us</span></h1>
