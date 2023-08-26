@@ -5,7 +5,7 @@ import logo from "@static/logo.png";
 const  { headerclass }  = Astro.props;
 ---
 
-<nav id="nav" class="col-start-1 col-end-6 flex md:col-start-1 md:col-end-13 lg:col-start-1 lg:col-end-13 place-content-center backdrop-blur-md bg-opacity-5 bg-white flex-row w-full border-b border-solid border-zinc-600 border-t-0 border-r-0 border-l-0 top-0 sticky z-[100]">
+<nav id="nav" class="col-start-1 max-h-24 col-end-6 flex md:col-start-1 md:col-end-13 lg:col-start-1 lg:col-end-13 place-content-center backdrop-blur-md bg-opacity-5 bg-white flex-row w-full border-b border-solid border-zinc-600 border-t-0 border-r-0 border-l-0 top-0 sticky z-[100]">
     <div class="flex self-center max-w-[1312px] justify-between w-full">
         <a class="group h-18 lg:h-16 my-2 no-underline flex flex-row place-content-center items-center place-self-center hover:scale-110 duration-300" href={`${import.meta.env.BASE_URL}`}>
             <svg class="flex" height="200px" viewBox="0 0 360 428">
