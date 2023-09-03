@@ -1,0 +1,9 @@
+---
+const  { title }  = Astro.props;
+---
+<div class="flex peer peer-hover:invisible place-content-center origin-left transform transition-all duration-300">
+    <div class="peer cursor-pointer flex rounded-full bg-teal-400 h-2 w-2 self-center animate-pulse"/>
+    <div class="text-transparent bg-transparent peer-hover:text-black peer-hover:bg-neutral-100 cursor-default m-0 p-0 ml-2 text-[13px] duration-300 transition-colors ease-in-out">{title}</div>
+</div>
+
+

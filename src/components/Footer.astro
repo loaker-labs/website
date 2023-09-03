@@ -1,7 +1,50 @@
 ---
-const { footerclass } = Astro.props;
+
 ---
 
-<footer class={footerclass}>
-    <p class="p-4 bg-slate-100 w-full text-center text-black whitespace-nowrap">Copyright © 2023 Loaker.</p>
+<footer class="flex flex-col w-full h-fit bg-white place-content-center border-b border-solid border-zinc-600 border-t-0 border-r-0 border-l-0">
+    <div class="flex flex-row w-full h-fit justify-evenly p-8">
+        <section class="text-black text-sm">
+            <p class="flex">Loaker SAS <br>
+            5 rue Charles Fourier <br>
+            91000 Évry <br>
+            </p>
+            <a class="flex cursor-pointer no-underline text-teal-400 font-bold mt-4">contact@loaker.fr</a>
+            <a class="flex cursor-pointer no-underline text-teal-400 font-bold mt-2">06 46 07 39 87</a>
+        </section>
+
+        <section class="flex flex-col w-fit h-fit">
+            <p class="w-full text-teal-400 font-bold uppercase">Extensions</p>
+            <a class="flex cursor-pointer no-underline hover:text-teal-400">Chrome</a>
+            <a class="flex cursor-pointer no-underline hover:text-teal-400">Firefox</a>
+            <a class="flex cursor-pointer no-underline hover:text-teal-400">Edge</a>
+        </section>
+
+        <section class="flex flex-col w-fit h-fit">
+            <p class="w-full text-teal-400 font-bold uppercase">Solution</p>
+            <a class="flex cursor-pointer no-underline hover:text-teal-400">Sécurité</a>
+            <a class="flex cursor-pointer no-underline hover:text-teal-400">Tester moi !</a>
+        </section>
+
+        <section class="flex flex-col w-fit h-fit">
+            <p class="w-full text-teal-400 font-bold uppercase">Autre</p>
+            <a class="flex cursor-pointer no-underline hover:text-teal-400">Blog</a>
+            <a class="flex cursor-pointer no-underline hover:text-teal-400">Support</a>
+        </section>
+
+        <section class="flex bg-transparent flex-col text-md items-center w-fit h-fit self-center gap-4">
+		    <p class="text-black whitespace-nowrap text-lg leading-0 m-0 text-left w-full">Loaker</span></p>
+            <div class="flex flex-row w-full gap-4">
+                <svg width="30" class="fill-black hover:fill-indigo-500 hover:scale-110 duration-300 cursor-pointer" viewBox="0 0 160 119"><path d="M135.535 9.96646C125.042 5.24938 113.941 1.89769 102.526 0C101.104 2.46985 99.443 5.7918 98.2974 8.43459C85.9899 6.65652 73.7956 6.65652 61.7143 8.43459C60.5693 5.7924 58.8706 2.46985 57.4356 0C46.0093 1.89857 34.8991 5.25879 24.4012 9.99108C3.51121 40.3216 -2.15192 69.8979 0.679331 99.0557C14.535 108.997 27.9624 115.036 41.1637 118.988C44.4445 114.653 47.3447 110.064 49.8343 105.267C45.0945 103.533 40.5251 101.397 36.1806 98.8827C37.3239 98.0685 38.4403 97.22 39.5281 96.3384C65.8543 108.169 94.4593 108.169 120.472 96.3384C121.564 97.2142 122.68 98.0626 123.819 98.8827C119.467 101.403 114.889 103.544 110.14 105.28C112.644 110.096 115.539 114.69 118.811 119C132.024 115.049 145.464 109.01 159.32 99.0557C162.642 65.2549 153.645 35.95 135.535 9.96646ZM53.4212 81.1242C45.5181 81.1242 39.0368 74.0353 39.0368 65.4032C39.0368 56.771 45.3799 49.6702 53.4212 49.6702C61.4631 49.6702 67.9437 56.7584 67.8056 65.4032C67.8181 74.0353 61.4631 81.1242 53.4212 81.1242ZM106.578 81.1242C98.6749 81.1242 92.1943 74.0353 92.1943 65.4032C92.1943 56.771 98.5368 49.6702 106.578 49.6702C114.62 49.6702 121.101 56.7584 120.962 65.4032C120.962 74.0353 114.62 81.1242 106.578 81.1242Z"></path></svg>
+                <svg width="30" class="fill-black hover:fill-sky-500 hover:scale-110 duration-300 cursor-pointer" viewBox="0 0 160 120"><path d="M160 14.2053C154.009 16.6548 147.654 18.2627 141.146 18.9754C147.924 15.2262 153.129 9.28929 155.579 2.21547C149.136 5.74422 142.086 8.23045 134.735 9.56673C128.747 3.67938 120.216 0 110.774 0C92.6456 0 77.9475 13.5639 77.9475 30.2933C77.9475 32.668 78.2381 34.9798 78.7975 37.1975C51.5163 35.9338 27.3288 23.8736 11.1381 5.54531C8.31312 10.0195 6.69438 15.2239 6.69438 20.775C6.69438 31.2854 12.49 40.5574 21.2975 45.9902C16.0847 45.8396 10.9866 44.5402 6.42875 42.2007C6.42688 42.3276 6.42688 42.4545 6.42688 42.5819C6.42688 57.2596 17.7419 69.5039 32.7581 72.2869C27.9243 73.5001 22.8539 73.6777 17.9344 72.806C22.1113 84.8414 34.2344 93.5995 48.5981 93.8446C37.3638 101.969 23.2094 106.813 7.83063 106.813C5.18062 106.813 2.56813 106.669 0 106.389C14.5269 114.985 31.7813 120 50.3188 120C110.698 120 143.715 73.8385 143.715 33.8066C143.715 32.4926 143.684 31.1862 143.62 29.8872C150.046 25.5998 155.593 20.2894 160 14.2053Z"></path></svg>
+                <svg width="30" class="fill-black hover:fill-[#0A66C2] hover:scale-110 duration-300 cursor-pointer" viewBox="0 0 16 16"><path d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"/></svg>    
+            </div>
+	    </section>
+    </div>
+    <div class="flex p-2 pt-6 w-full text-center text-xs text-opacity-70 text-black whitespace-nowrap justify-evenly">
+        <p class="flex cursor-default">Copyright © 2023 Loaker.</p>
+        <a class="flex cursor-pointer no-underline hover:text-teal-400">CGU</a>
+        <a class="flex cursor-pointer no-underline hover:text-teal-400">CGV</a>
+        <a class="flex cursor-pointer no-underline hover:text-teal-400">Mentions légales</a>
+    </div>
 </footer>

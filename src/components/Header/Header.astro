@@ -17,49 +17,42 @@ const  { headerclass }  = Astro.props;
                 </g>
             </svg>
             
-            <!-- <svg class="fill-[#4FDAB8]" width="50px" height="50px" viewBox="0 0 512 512"><path d="M329.125 20.5l-3.72 9.625c-7.204 18.77-32.286 34.72-63.624 34.72-31.538 0-56.586-16.223-63.624-35.22l-2.25-6.094h-8.687l-1.97.97C111.456 61.1 60.844 148.48 60.844 249.313c0 132.906 89.104 242.78 200.937 242.78 111.835 0 200.283-109.904 200.283-242.78 0-100.493-50.352-187.376-123.72-224.188l-9.218-4.625zM185.28 45.78c13.738 23.13 43.113 37.782 76.5 37.782 33.14 0 62.43-14.33 76.345-37.187 61.527 35.396 105.25 112.692 105.25 202.938 0 124.622-82.108 224.093-181.594 224.093-99.485 0-182.217-99.5-182.217-224.094 0-90.54 43.907-168.274 105.718-203.53zm-4.78 27.75c-11.36 8.202-21.867 18.068-31.28 29.376l60.374 78.844h102.311l60.375-78.875c-9.063-10.883-19.12-20.456-30-28.47-18.174 18.622-47.482 30.72-80.5 30.72-33.52 0-63.174-12.487-81.28-31.594zm-42.906 44.907c-23.987 35.515-38.47 81.505-38.47 131.782 0 2.038.047 4.068.095 6.093h53.436L196 194.75l-58.406-76.313zm246.312 0L325.5 194.75l43.344 61.563h53.47c.046-2.025.092-4.055.092-6.094 0-50.28-14.51-96.267-38.5-131.782zm-169.062 82l-44.22 62.813 44.22 62.844h91.812l44.22-62.844-44.22-62.813h-91.812zM100.344 275c4.55 47.216 21.928 89.423 47.625 120.97l48.53-63.44L156.03 275h-55.686zm265.125 0L325 332.53l48.563 63.44c25.696-31.547 43.075-73.754 47.625-120.97h-55.72zm-154.783 69.78l-50 65.314c27.524 27.363 62.274 43.687 100.063 43.687 37.79 0 72.57-16.323 100.094-43.686l-50-65.313H210.688z"/></svg>
-            <h1 class=" pt-1 cursor-pointer lg:text-3xl text-3xl text-black font-bold group-hover:underline underline-offset-4 decoration-[#4FDAB8]">Loaker</h1> -->
+            <!-- <svg class="fill-teal-400" width="50px" height="50px" viewBox="0 0 512 512"><path d="M329.125 20.5l-3.72 9.625c-7.204 18.77-32.286 34.72-63.624 34.72-31.538 0-56.586-16.223-63.624-35.22l-2.25-6.094h-8.687l-1.97.97C111.456 61.1 60.844 148.48 60.844 249.313c0 132.906 89.104 242.78 200.937 242.78 111.835 0 200.283-109.904 200.283-242.78 0-100.493-50.352-187.376-123.72-224.188l-9.218-4.625zM185.28 45.78c13.738 23.13 43.113 37.782 76.5 37.782 33.14 0 62.43-14.33 76.345-37.187 61.527 35.396 105.25 112.692 105.25 202.938 0 124.622-82.108 224.093-181.594 224.093-99.485 0-182.217-99.5-182.217-224.094 0-90.54 43.907-168.274 105.718-203.53zm-4.78 27.75c-11.36 8.202-21.867 18.068-31.28 29.376l60.374 78.844h102.311l60.375-78.875c-9.063-10.883-19.12-20.456-30-28.47-18.174 18.622-47.482 30.72-80.5 30.72-33.52 0-63.174-12.487-81.28-31.594zm-42.906 44.907c-23.987 35.515-38.47 81.505-38.47 131.782 0 2.038.047 4.068.095 6.093h53.436L196 194.75l-58.406-76.313zm246.312 0L325.5 194.75l43.344 61.563h53.47c.046-2.025.092-4.055.092-6.094 0-50.28-14.51-96.267-38.5-131.782zm-169.062 82l-44.22 62.813 44.22 62.844h91.812l44.22-62.844-44.22-62.813h-91.812zM100.344 275c4.55 47.216 21.928 89.423 47.625 120.97l48.53-63.44L156.03 275h-55.686zm265.125 0L325 332.53l48.563 63.44c25.696-31.547 43.075-73.754 47.625-120.97h-55.72zm-154.783 69.78l-50 65.314c27.524 27.363 62.274 43.687 100.063 43.687 37.79 0 72.57-16.323 100.094-43.686l-50-65.313H210.688z"/></svg>
+            <h1 class=" pt-1 cursor-pointer lg:text-3xl text-3xl text-black font-bold group-hover:underline underline-offset-4 decoration-teal-400">Loaker</h1> -->
         </a>
         
         
-        <a href={`${import.meta.env.BASE_URL}pricing`} class="hidden xl:inline-block cursor-pointer text-sm m-2 py-2 whitespace-nowrap text-black uppercase h-fit w-fit self-center font-extrabold relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[3px] after:bottom-0 after:left-0 after:bg-[#4FDAB8] after:origin-bottom-right after:ease-out after:duration-300 after:transition-transform hover:after:scale-x-100 hover:after:origin-bottom-left">
+        <a href={`${import.meta.env.BASE_URL}pricing`} class="hidden xl:inline-block cursor-pointer text-sm m-2 py-2 whitespace-nowrap text-black uppercase h-fit w-fit self-center font-extrabold relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[3px] after:bottom-0 after:left-0 after:bg-teal-400 after:origin-bottom-right after:ease-out after:duration-300 after:transition-transform hover:after:scale-x-100 hover:after:origin-bottom-left">
             Solutions
         </a>
 
-        <a href={`${import.meta.env.BASE_URL}pricing`} class="hidden xl:inline-block cursor-pointer text-sm m-2 py-2 whitespace-nowrap text-black uppercase h-fit w-fit self-center font-extrabold relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[3px] after:bottom-0 after:left-0 after:bg-[#4FDAB8] after:origin-bottom-right after:ease-out after:duration-300 after:transition-transform hover:after:scale-x-100 hover:after:origin-bottom-left">
+        <a href={`${import.meta.env.BASE_URL}pricing`} class="hidden xl:inline-block cursor-pointer text-sm m-2 py-2 whitespace-nowrap text-black uppercase h-fit w-fit self-center font-extrabold relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[3px] after:bottom-0 after:left-0 after:bg-teal-400 after:origin-bottom-right after:ease-out after:duration-300 after:transition-transform hover:after:scale-x-100 hover:after:origin-bottom-left">
             Tarifs
         </a>
 
-        <a href={`${import.meta.env.BASE_URL}pricing`} class="hidden xl:inline-block cursor-pointer text-sm m-2 py-2 whitespace-nowrap text-black uppercase h-fit w-fit self-center font-extrabold relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[3px] after:bottom-0 after:left-0 after:bg-[#4FDAB8] after:origin-bottom-right after:ease-out after:duration-300 after:transition-transform hover:after:scale-x-100 hover:after:origin-bottom-left">
+        <a href={`${import.meta.env.BASE_URL}pricing`} class="hidden xl:inline-block cursor-pointer text-sm m-2 py-2 whitespace-nowrap text-black uppercase h-fit w-fit self-center font-extrabold relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[3px] after:bottom-0 after:left-0 after:bg-teal-400 after:origin-bottom-right after:ease-out after:duration-300 after:transition-transform hover:after:scale-x-100 hover:after:origin-bottom-left">
             Contacts
         </a>
 
-        <a href={`${import.meta.env.BASE_URL}extension`} class="hidden xl:flex items-center cursor-pointer text-sm m-2 py-2 whitespace-nowrap text-black uppercase h-fit w-fit self-center font-extrabold relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[3px] after:bottom-0 after:left-0 after:bg-[#4FDAB8] after:origin-bottom-right after:ease-out after:duration-300 after:transition-transform hover:after:scale-x-100 hover:after:origin-bottom-left">
+        <a href={`${import.meta.env.BASE_URL}extension`} class="hidden xl:flex items-center cursor-pointer text-sm m-2 py-2 whitespace-nowrap text-black uppercase h-fit w-fit self-center font-extrabold relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[3px] after:bottom-0 after:left-0 after:bg-teal-400 after:origin-bottom-right after:ease-out after:duration-300 after:transition-transform hover:after:scale-x-100 hover:after:origin-bottom-left">
             <svg class="fill-black mr-2" width="20px" height="20px" viewBox="0 0 24 24" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" color="#000000"> <path d="M9 4C9 2.89543 9.89543 2 11 2C12.1046 2 13 2.89543 13 4V6H18V11H20C21.1046 11 22 11.8954 22 13C22 14.1046 21.1046 15 20 15H18V20H13V18C13 16.8954 12.1046 16 11 16C9.89543 16 9 16.8954 9 18V20H4V15H6C7.10457 15 8 14.1046 8 13C8 11.8954 7.10457 11 6 11H4V6H9V4Z"/> </svg>
             Ajouter l'extension
         </a>
 
-        <a href={`${import.meta.env.BASE_URL}next`} class="hidden xl:inline-block cursor-pointer text-sm m-2 py-2 whitespace-nowrap text-black uppercase h-fit w-fit self-center font-extrabold relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[3px] after:bottom-0 after:left-0 after:bg-[#4FDAB8] after:origin-bottom-right after:ease-out after:duration-300 after:transition-transform hover:after:scale-x-100 hover:after:origin-bottom-left">
+        <a href={`${import.meta.env.BASE_URL}next`} class="hidden xl:inline-block cursor-pointer text-sm m-2 py-2 whitespace-nowrap text-black uppercase h-fit w-fit self-center font-extrabold relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[3px] after:bottom-0 after:left-0 after:bg-teal-400 after:origin-bottom-right after:ease-out after:duration-300 after:transition-transform hover:after:scale-x-100 hover:after:origin-bottom-left">
             Pour la suite...
         </a>
 
-        <a href={`${import.meta.env.BASE_URL}connexion`} class="hidden xl:inline-block cursor-pointer text-sm m-2 py-2 whitespace-nowrap text-black uppercase h-fit w-fit self-center font-extrabold relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[3px] after:bottom-0 after:left-0 after:bg-[#4FDAB8] after:origin-bottom-right after:ease-out after:duration-300 after:transition-transform hover:after:scale-x-100 hover:after:origin-bottom-left">
+        <a href={`${import.meta.env.BASE_URL}connexion`} class="hidden xl:inline-block cursor-pointer text-sm m-2 py-2 whitespace-nowrap text-black uppercase h-fit w-fit self-center font-extrabold relative after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[3px] after:bottom-0 after:left-0 after:bg-teal-400 after:origin-bottom-right after:ease-out after:duration-300 after:transition-transform hover:after:scale-x-100 hover:after:origin-bottom-left">
             Connexion
         </a>
 
         
-        <a href={`${import.meta.env.BASE_URL}pricing`} class="hidden xl:flex rounded-full h-fit self-center group items-center rounded-5 uppercase text-white bg-black hover:bg-[#4FDAB8] duration-300 ease-in-out px-4 py-3" target="_blank" rel="noreferrer">
+        <a href={`${import.meta.env.BASE_URL}pricing`} class="hidden xl:flex rounded-full h-fit self-center group items-center rounded-5 uppercase text-white hover:text-black bg-black hover:bg-gradient-to-tl from-[#4FD9BC] to-[#52C8E8] duration-300 ease-in-out px-4 py-3" target="_blank" rel="noreferrer">
             Testez
-            <span class="group relative ml-2 translate-y-[-2px]">
-                <div class="absolute top-1/2 left-0 w-[0px] -translate-y-[1px] overflow-hidden transition-all duration-300 ease-in-out group-hover:w-[10px]">
-                    <svg width="10" height="3" viewBox="0 0 10 3" fill="none">
-                        <path d="M10 1.5H0" stroke="white" stroke-width="1.5"></path>
-                    </svg>
-                </div>
-                <svg width="7" height="10" viewBox="0 0 6 9" fill="none" class="transition-transform duration-300 ease-in-out group-hover:translate-x-[6px]">
-                    <path d="M1.5 1.5L4.5 4.5L1.5 8" stroke="white" stroke-width="1.5"></path>
-                </svg>
-            </span>
+            <svg class="stroke-white group-hover:stroke-black transition-transform duration-300 ease-in-out group-hover:translate-x-[6px]" width="12" height="18" viewBox="0 0 6 9" fill="none" >
+                <path d="M1.5 1.5L4.5 4.5L1.5 8" stroke-width="1.5"></path>
+            </svg>
         </a>
         
 
