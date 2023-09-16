@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+---
+
+<BaseLayout betweenMainAndFooterClass="grow" mainClass="w-[95%] 3xl:w-1/2 place-content-center text-center items-center self-center flex flex-col text-black">
+
+    <section class="flex h-[50vh] w-screen bg-white z-[5] -top-48"></section>
+
+
+    <section class="flex w-[50vw]">
+        <div class="flex z-[4] bg-slate-200 w-2 h-full">
+            <div class="w-2 h-[50wh] fixed top-0 bottom-[50vh] bg-blue-600 z-[-2]"></div>
+        </div>
+        <div class="flex flex-col">
+            <div class="flex flex-col">
+                <h3 class="text-black">Phase1 : POC</h3>
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+
+
+</BaseLayout>
