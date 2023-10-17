@@ -1,22 +1,23 @@
 ---
+import { getImage } from "astro:assets"
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Comparator from '../components/Comparator/Comparator.astro';
 import BoxFeatures from '@components/BoxFeatures.astro';
 import Question from '@components/Question.astro';
-import GraphPoint from '@components/GraphPoint.astro';
 import fond1 from '@static/fond1.jpg';
-
+import noise from '@static/noise-light.png';
+const optimizedBackgroundImage = await getImage({ src: noise })
 
 const boxFeaturesSvgClass = "self-center p-2 fill-teal-400" 
 ---
 
 <BaseLayout betweenMainAndFooterClass="grow" mainClass="flex w-[95%] xl:w-[70%] place-content-center text-center items-center self-center flex-col gap-72 mb-72"> 
 
-	<img src={fond1.src} class="fixed opacity-50 top-0 left-0 w-screen h-screen object-cover z-[-1]"/>
+	<!-- <img src={fond1.src} class="fixed opacity-50 top-0 left-0 w-screen h-screen object-cover z-[-1]"/> -->
 	
 	<section class="w-screen h-screen flex flex-col bg-transparent place-content-center">
 		<div class="flex flex-col items-center self-center">
-		<h1 class="text-black font-semibold text-5xl md:text-7xl leading-0 m-0 p-12">Apportez la <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#4FD9BC] to-[#52C8E8]">sécurité</span>.</h1>
+		<h1 class="text-black font-semibold text-5xl md:text-7xl leading-0 m-0 p-12">Prenez en main votre <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#4FD9BC] to-[#52C8E8]">sécurité</span>.</h1>
 
 			<a class="flex text-2xl my-12 w-fit h-fit bg-gradient-to-tl from-[#4FD9BC] to-[#52C8E8] rounded-full drop-shadow-[0_0_10px_rgba(0,255,255,0.7)] no-underline" href=`${import.meta.env.BASE_URL}demo`>
 				<div class="underline-none group inline-flex items-center grow m-[1px] px-6 py-6 bg-black rounded-full text-white hover:text-black font-bold hover:bg-transparent duration-300 whitespace-nowrap ease-in-out">
@@ -35,7 +36,7 @@ const boxFeaturesSvgClass = "self-center p-2 fill-teal-400"
 	</section>	
 
 
-	<section class="w-full flex flex-col gap-6">
+	<section class="w-screen p-24 flex flex-col gap-6 bg-gradient-to-l from-sky-300 to-teal-400">
 		<h2 class="text-black font-bold text-3xl md:text-5xl leading-0 m-0 p-12">Tout ce dont vous avez besoin en un gestionnaire de mots de passes</span></h2>
 		<div class="flex flex-col lg:flex-row gap-6 w-full">
 			<BoxFeatures title1="Intuitif" title2="Ne perdez plus de temps avec vos mots de passe" text="L'interface de Loaker est conçue pour une utilisation fluide et intuitive de la solution tout en limitant les actions de l'utilisateur pour le pousser à ne pas faire d'erreur qui compromettrait la sécurité de l'entreprise. Si vous trouvez quelque chose à y redire, faites le nous savoir, nous sommes à votre écoute pour faire mûrir la solution.">
@@ -51,65 +52,44 @@ const boxFeaturesSvgClass = "self-center p-2 fill-teal-400"
 		</div>
 	</section> 
 
-	<section class="w-full p-4 flex flex-col bg-neutral-100 bg-opacity-80 border border-neutral-400 rounded-[2.25rem] place-content-center">
+	<section class="w-full p-4 flex flex-col bg-white rounded-lg place-content-center">
 		<h2 class="flex text-black font-bold text-5xl md:text-5xl leading-0 m-0 p-12 place-self-center">Epargnez votre entreprise</h2>
 		<div class="flex flex-col lg:flex-row gap-8">
 			<div class="flex flex-col basis-1/2 content-center">
 				<h2 class="text-teal-400 font-bold text-5xl md:text-7xl leading-0 p-12">4.5M$</h2>
 				<p class="text-black text-lg md:text-2xl leading-0 w-full text-left pl-12">C'est le coût moyen engendré par une faille issue de la compromission d'accès dans une entreprise.</p>
 			</div>
-			<div class="hidden sm:flex basis-1/2 place-content-center">
-				<svg class="absolute fill-slate-700 animate-pulse translate-x-[120px] translate-y-[290px]" width="40" height="40" viewBox="0 0 36 36">
-					<path d="M30.4 17.6a12.78 12.78 0 0 0-6.7-3.7c-1.1-.3-2.2-.5-3.3-.6 2.8-3.3 2.3-8.3-1-11.1s-8.3-2.3-11.1 1-2.3 8.3 1 11.1c.6.5 1.2.9 1.8 1.1v2.2l-1.6-1.5c-1.4-1.4-3.7-1.4-5.2 0-1.4 1.4-1.5 3.6-.1 5l4.6 5.4c.2 1.4.7 2.7 1.4 3.9a11.78 11.78 0 0 0 1.9 2.5v1.9a.94.94 0 0 0 1 1h13.6a1.08 1.08 0 0 0 1-1v-2.6c1.9-2.3 2.9-5.2 2.9-8.1v-5.8c.1-.4 0-.6-.2-.7zm-22-9.4c0-3.3 2.7-5.9 6-5.8 3.3 0 5.9 2.7 5.8 6 0 1.8-.8 3.4-2.2 4.5v-5a3.4 3.4 0 0 0-3.4-3.2c-1.8-.1-3.4 1.4-3.4 3.2v5.2c-1.7-1-2.7-2.9-2.8-4.9h0zM28.7 24c.1 2.6-.8 5.1-2.5 7.1-.2.2-.4.4-.4.7v2.1H14.2v-1.4c0-.3-.2-.6-.4-.8a7.87 7.87 0 0 1-1.8-2.2c-.6-1-1-2.2-1.2-3.4 0-.2-.1-.4-.2-.6l-4.8-5.7c-.3-.3-.5-.7-.5-1.2 0-.4.2-.9.5-1.2.7-.6 1.7-.6 2.4 0l2.9 2.9v3l1.9-1V7.9c.1-.7.7-1.3 1.5-1.2.7 0 1.4.5 1.4 1.2v11.5l2 .4v-4.6c.1-.1.2-.1.3-.2.7 0 1.4.1 2.1.2v5.1l1.6.3v-5.2l1.2.3c.5.1 1 .3 1.5.5v5l1.6.3v-4.6c.9.4 1.7 1 2.4 1.7l.1 5.4z"/>
-					<path fill-opacity="0" d="M0 0h36v36H0z"/>
-				</svg>				
-				<svg viewBox="0 0 100 100" width="400" height="400" stroke="#000" fill="#000">
-					<line x1="2" y1="98" x2="98" y2="98" stroke-width="0.7"  stroke-linecap="round"/>
-					<line x1="95" y1="99.5" x2="98" y2="98" stroke-width="0.7"  stroke-linecap="round"/>
-					<line x1="95" y1="96.5" x2="98" y2="98" stroke-width="0.7"  stroke-linecap="round"/>
-
-					<line x1="2" y1="2" x2="2" y2="97.5" stroke-width="0.7" stroke-linecap="round"/>
-					<line x1="2" y1="2" x2="0.5" y2="5" stroke-width="0.7" stroke-linecap="round"/>
-					<line x1="3.5" y1="5" x2="2" y2="2" stroke-width="0.7" stroke-linecap="round"/>
-					
-					<p class="translate-x-[-205px] -rotate-90 translate-y-[190px] absolute text-[13px]">Coût moyen d'une faille par vecteur d'attaque</p>
-					<p class="translate-x-[0px] translate-y-[395px] absolute text-[13px]">Proportion des failles par vecteur d'attaque</p>
-					<p class="translate-x-[-200px] translate-y-[405px] absolute text-[8px] italic">source: rapport annuel IBM</p>
-				</svg>
-				
-
-				<div class="absolute translate-x-[116px] translate-y-[98px]">
-					<GraphPoint title="Vulnérabilités dans les logiciels tiers" />
-				</div>
-				<div class="absolute translate-x-[46px] translate-y-[-2px]">
-					<GraphPoint title="Compromission des e-mails professionnels" />
-				</div>
-				<div class="absolute translate-x-[-90px] translate-y-[217px]">
-					<GraphPoint title="Ingénierie sociale" />
-				</div>
-				<div class="absolute translate-x-[25px] translate-y-[265px]">
-					<GraphPoint title="Perte accidentelle de données ou d'appareils" />
-				</div>
-				<div class="absolute translate-x-[-35px] translate-y-[300px]">
-					<GraphPoint title="Erreur système" />
-				</div>
-				<div class="absolute translate-x-[105px] translate-y-[270px]">
-					<GraphPoint title="Compromission de la sécurité physique" />
-				</div>
-				<div class="absolute translate-x-[35px] translate-y-[194px]">
-					<GraphPoint title="Initié malveillant" />
-				</div>
-				<div class="absolute translate-x-[214px] translate-y-[107px]">
-					<GraphPoint title="Identifiants volés ou compromis" />
-				</div>
-				<div class="absolute translate-x-[100px] translate-y-[-2px]">
-					<GraphPoint title="Hameçonnage" />
+			<div class="flex">
+				<p>fréquence</p>
+				<div class="flex flex-col gap-2 border-black border-l-2 border-0">
+					<div class="flex place-content-center place-self-start">
+						<div class="flex h-[60px] w-[418px] place-content-center place-items-center bg-teal-400">4.18M</div>
+						<div class="flex self-center">Initié malveillant</div>
+					</div>
+					<div class="flex place-content-center place-self-start">
+						<div class="flex h-[60px] w-[396px] place-content-center place-items-center bg-teal-400">3.96M</div>
+						<div class="flex self-center">Compromission de la sécurité physique</div>
+					</div>
+					<div class="flex place-content-center place-self-start">
+						<div class="flex h-[60px] w-[382px] place-content-center place-items-center bg-teal-400">3.82M</div>
+						<div>Erreur système </div>
+					</div>
+					<div class="flex place-content-center place-self-start">
+						<div class="flex h-[60px] w-[394px] place-content-center place-items-center bg-teal-400">3.94M</div>
+						<div>Perte accidentelle de données ou perte d'appareils</div>
+					</div>
+					<div class="flex place-content-center place-self-start">
+						<div class="flex h-[60px] w-[410px] place-content-center place-items-center bg-teal-400">4.1M</div>
+						<div>Ingénierie sociale</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</section>
 
-  
+	<section class="w-full h-[200px] bg-[#3139FB] flex flex-col rounded-lg place-content-center" style={`background-image: url('${optimizedBackgroundImage.src}')`}>
+		coucou
+	</section>
 
 	<section class="w-full md:flex hidden flex-col gap-6 place-content-center items-center">
 		<h2 class="text-black font-bold text-3xl xl:text-5xl leading-0 m-0 p-12">Competitive <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#4FD9BC] to-[#52C8E8]">Advantages</span></h2>
