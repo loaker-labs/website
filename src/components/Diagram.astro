@@ -1,0 +1,19 @@
+---
+import DiagramBar from "./DiagramBar.astro";
+
+const diagValues={
+    "Initié malveillant": "4.18",
+    "Compromission de la sécurité physique": "3.96",
+    "Erreur système": "3.82",
+    "Perte accidentelle de données ou perte d'appareils": "3.94",
+    "Ingénierie sociale": "4.1",
+}
+---
+<div class="flex flex-col self-center">
+    <p class="font-bold flex -translate-x-[6.5px] translate-y-4"><span class="text-2xl font-bold">^ </span>  fréquence</p>
+    <div class="flex flex-col gap-2 border-black border-l-2 border-0 pt-6">
+        {Object.entries(diagValues).map(([key, value]) => (
+            <DiagramBar title={key} price={value} />
+        ))}
+    </div>
+</div>
