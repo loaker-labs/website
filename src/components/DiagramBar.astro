@@ -3,6 +3,8 @@ const  { title, price }  = Astro.props;
 ---
 
 <div class="flex flex-col xl:flex-row place-content-center place-self-start">
-    <div class="flex h-[60px] place-content-center place-self-start place-items-center bg-teal-400" style={`width:${price*80}px;`}>{title}</div>
-    <div class="flex self-center">{price}M</div>
+    <div class="flex h-[60px] place-content-center place-self-start place-items-center bg-teal-400 rounded-r-xl px-2 leading-none" style={`width:${price*80}px;`}>
+        <div class="flex basis-[90%] place-self-center text-sm place-content-center">{title}</div>
+        <div class="flex self-center basis-[10%] font-bold text-white">{price}M</div>
+    </div>
 </div>
