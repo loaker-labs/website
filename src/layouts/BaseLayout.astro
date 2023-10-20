@@ -70,13 +70,6 @@ html {
 </script>
 
 <style is:global>
-	.reveal-from-top{
-		position: relative;
-		transform: translateY(-150px);
-		opacity: 0;
-		transition: 1s all ease;
-	}
-	
 	.reveal-from-bottom{
 		position: relative;
 		transform: translateY(150px);
@@ -88,6 +81,7 @@ html {
 		position: relative;
 		transform: translateX(-150px);
 		opacity: 0;
+		display: none;
 		transition: 1s all ease;
 	}
 
@@ -95,6 +89,7 @@ html {
 		position: relative;
 		transform: translateX(150px);
 		opacity: 0;
+		display: none;
 		transition: 1s all ease;
 	}
 
@@ -106,6 +101,7 @@ html {
 	.reveal-from-left.active, .reveal-from-right.active{
 		transform: translateX(0);
 		opacity: 1;
+		display: block;
 	}
 
 /* 	.reveal.active{
