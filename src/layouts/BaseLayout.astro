@@ -31,38 +31,6 @@ const navaClass = "xl:hidden no-underline text-2xl text-white font-bold m-8 p-2 
 	</body>
 </html>
 
-<script>
-	function reveal() {
-  		var reveals = document.querySelectorAll(".reveal");
-		for (var i = 0; i < reveals.length; i++) {
-			var windowHeight = window.innerHeight;
-			var elementTop = reveals[i].getBoundingClientRect().top;
-			var elementVisible = 150;
-
-			if (elementTop < windowHeight - elementVisible) {
-			reveals[i].classList.add("active");
-			} else {
-			reveals[i].classList.remove("active");
-			}
-		}
-	}
-
-	window.addEventListener("scroll", reveal);
-</script>
-
-<style>
-	.reveal{
-		position: relative;
-		transform: translateY(150px);
-		opacity: 0;
-		transition: 1s all ease;
-	}
-
-	.reveal.active{
-		transform: translateY(0);
-		opacity: 1;
-	}
-</style>
 
 <style is:global>
 @font-face {
@@ -78,3 +46,70 @@ html {
 }
 </style>
 
+<script is:inline>
+	function reveal() {
+		var reveals = document.querySelectorAll(".reveal-from-bottom, .reveal-from-left, .reveal-from-right");
+		for (var i = 0; i < reveals.length; i++) {
+			var windowHeight = window.innerHeight;
+			var elementTop = reveals[i].getBoundingClientRect().top;
+			var elementVisible = 150;
+
+			if (elementTop < windowHeight - elementVisible) {
+			reveals[i].classList.add("active");
+			} else {
+			reveals[i].classList.remove("active");
+			}
+		}
+	}
+
+	window.addEventListener("scroll", reveal);
+
+	window.onload = (event) => {
+  		console.log("page is fully loaded");
+		reveal();};
+</script>
+
+<style is:global>
+	.reveal-from-top{
+		position: relative;
+		transform: translateY(-150px);
+		opacity: 0;
+		transition: 1s all ease;
+	}
+	
+	.reveal-from-bottom{
+		position: relative;
+		transform: translateY(150px);
+		opacity: 0;
+		transition: 1s all ease;
+	}
+
+	.reveal-from-left{
+		position: relative;
+		transform: translateX(-150px);
+		opacity: 0;
+		transition: 1s all ease;
+	}
+
+	.reveal-from-right{
+		position: relative;
+		transform: translateX(150px);
+		opacity: 0;
+		transition: 1s all ease;
+	}
+
+	.reveal-from-bottom.active{
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	.reveal-from-left.active, .reveal-from-right.active{
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+/* 	.reveal.active{
+		transform: translateY(0);
+		opacity: 1;
+	} */
+</style>

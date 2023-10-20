@@ -1,10 +1,11 @@
 ---
 const  { title1, title2, text }  = Astro.props;
+const { class: className } = Astro.props;
 ---
 
-<div class="reveal flex flex-col basis-1/2 bg-white drop-shadow-[0_0_8px_rgba(0,0,0,0.2)] rounded-2xl space-y-6 p-4">
+<div class:list={["flex flex-col basis-1/2 bg-white drop-shadow-[0_0_8px_rgba(0,0,0,0.2)] rounded-2xl space-y-6 p-4",className]}>
         <span class="text-3xl text-left w-fit font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#4FD9BC] to-[#52C8E8]">{title1}</span>
         <slot/>
         <p class="text-xl font-semibold text-left text-black">{title2}</p>
         <p class="text-left text-md">{text}</p>
-</div>
+</div>  
