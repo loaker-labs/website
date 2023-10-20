@@ -1,6 +1,6 @@
 # Loaker
 
-Loaker is a password manager based on blockchain technology. It is a decentralized, open-source, and free. Dont' hesitate to visit our website : [![Loaker](https://github.io/Loaker/frontend/)
+Loaker is a password manager based on blockchain technology. It is a decentralized, open-source, and free. Dont' hesitate to visit our website : ![Loaker](https://loaker.fr)
 
 ## Project Structure
 
