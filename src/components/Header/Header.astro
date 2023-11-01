@@ -1,10 +1,36 @@
 ---
-import Hamburger from "./Hamburger.astro";
 import Link from "./Link.astro";
+
+const links=[ //C'est la seule variable à modifier dans le header, le reste se fait tout seul
+    {
+        title: "Solution",
+        href: `${import.meta.env.BASE_URL}pricing`
+    },
+    {
+        title: "Tarifs",
+        href: `${import.meta.env.BASE_URL}pricing`
+    },
+    {
+        title: "Contacts",
+        href: `${import.meta.env.BASE_URL}pricing`
+    },
+    {
+        title: "Ajouter l'extension",
+        href: `${import.meta.env.BASE_URL}downloadExtension`
+    },
+    {
+        title: "Pour la suite...",
+        href: `${import.meta.env.BASE_URL}next`
+    },
+    {
+        title: "Connexion",
+        href: `${import.meta.env.BASE_URL}connexion`
+    },
+]
 ---
 
-<nav id="nav" class="drop-shadow-[0_0_8px_rgba(0,0,0,0.2)] col-start-1 max-h-24 py-2 col-end-6 flex md:col-start-1 md:col-end-13 lg:col-start-1 lg:col-end-13 place-content-center backdrop-blur-md bg-opacity-5 bg-white flex-row w-full top-0 fixed z-[100] duration-500 transition-transform ease-in-out">
-    <div class="flex self-center max-w-[1312px] justify-between w-full">
+<nav id="nav" class="drop-shadow-[0_0_8px_rgba(0,0,0,0.2)] col-start-1 max-h-24 col-end-6 flex flex-col md:col-start-1 md:col-end-13 lg:col-start-1 lg:col-end-13 place-content-center backdrop-blur-md bg-opacity-5 bg-white w-full top-0 fixed z-[100] duration-500 transition-transform ease-in-out">
+    <div class="flex z-50 bg-white self-center max-w-[1312px] justify-between w-full p-4">
         <a class="flex group h-16 gap-2 mx-2 no-underline place-content-center items-center place-self-center hover:scale-105 duration-300" href={`${import.meta.env.BASE_URL}`}>
             <svg class="flex h-full w-fit" width="100px" height="100px" viewBox='135 115 730 730'>
                 <circle class="fill-teal-400 stroke-teal-400" cx="500" cy="480" r="359" stroke-width="12"/>
@@ -12,13 +38,12 @@ import Link from "./Link.astro";
             </svg>
             <p class="text-teal-400 text-[30px] font-bold">LOAKER</p>
         </a>
-        
-        <Link title="Solution" href={`${import.meta.env.BASE_URL}pricing`}/>
-        <Link title="Tarifs" href={`${import.meta.env.BASE_URL}pricing`}/>
-        <Link title="Contacts" href={`${import.meta.env.BASE_URL}pricing`}/>
-        <Link title="Ajouter l'extension" href={`${import.meta.env.BASE_URL}downloadExtension`}/>
-        <Link title="Pour la suite..." href={`${import.meta.env.BASE_URL}next`}/>
-        <Link title="Connexion" href={`${import.meta.env.BASE_URL}connexion`}/>
+
+        {
+            links.map((link) => (
+                <Link title={link.title} href={link.href}/>
+            ))
+        }
 
         
         <a href={`${import.meta.env.BASE_URL}pricing`} class="hidden xl:flex text-sm gap-2 font-semibold rounded-full h-fit self-center group items-center rounded-5 uppercase text-white hover:text-black bg-black hover:bg-gradient-to-br from-teal-400 to-sky-400 duration-300 ease-in-out px-4 py-2" target="_blank" rel="noreferrer">
@@ -28,8 +53,23 @@ import Link from "./Link.astro";
             </svg>
         </a>
 
-        <Hamburger/>
+        <button id="menuButton" class="cursor-pointer list-none xl:hidden self-center">
+            <span class="sr-only">Menu de navigation</span>
+            <div class="flex flex-col gap-y-[10px]">
+                <span id="span1" class="relative w-[36px] h-[6px] rounded-full bg-black group-open:-rotate-45 ease-in-out duration-300 group-open:mb-0 group-open:top-4"></span> 
+                <span id="span2" class="relative w-[36px] h-[6px] rounded-full bg-black group-open:invisible"></span> 
+                <span id="span3" class="relative w-[36px] h-[6px] rounded-full bg-black group-open:bottom-4 group-open:rotate-45 duration-300 ease-in-out"></span>
+            </div>
+        </button>
 
+    </div>
+
+    <div id="menuList" class="absolute xl:hidden translate-y-[-100%] flex-col bg-white w-full p-6 right-0 left-0 top-20 z-40 place-content-center space-y-6 duration-300">
+        {
+            links.map((link) => (
+                <a href={link.href} class="flex rounded-md bg-teal-400 place-content-center self-center p-2 w-full no-underline text-xl text-black font-semibold">{link.title}</a>
+            ))
+        }
     </div>
 </nav>
 
@@ -55,4 +95,22 @@ window.addEventListener(
   },
   false,
 );
+</script>
+
+<script>
+    const menuButton = document.getElementById('menuButton');
+    const menuList = document.getElementById('menuList');
+    const span1 = document.getElementById('span1');
+    const span2 = document.getElementById('span2');
+    const span3 = document.getElementById('span3');
+
+    menuButton?.addEventListener('click', () => {
+        menuList?.classList.toggle('translate-y-[-100%]');
+        span1?.classList.toggle('-rotate-45');
+        span1?.classList.toggle('mb-0');
+        span1?.classList.toggle('top-4');
+        span2?.classList.toggle('invisible');
+        span3?.classList.toggle('bottom-4');
+        span3?.classList.toggle('rotate-45');
+    });
 </script>
