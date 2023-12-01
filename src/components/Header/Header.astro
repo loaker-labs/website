@@ -29,7 +29,7 @@ const links=[ //C'est la seule variable à modifier dans le header, le reste se 
 ]
 ---
 
-<nav id="nav" class="drop-shadow-[0_0_8px_rgba(0,0,0,0.2)] col-start-1 max-h-24 col-end-6 flex flex-col md:col-start-1 md:col-end-13 lg:col-start-1 lg:col-end-13 place-content-center backdrop-blur-md bg-opacity-5 bg-white w-full top-0 fixed z-[100] duration-500 transition-transform ease-in-out">
+<nav id="nav" class="drop-shadow-[0_0_8px_rgba(0,0,0,0.2)] col-start-1 max-h-24 col-end-6 flex flex-col md:col-start-1 md:col-end-13 lg:col-start-1 lg:col-end-13 place-content-center backdrop-blur-md bg-white w-full top-0 fixed z-[100] duration-500 transition-transform ease-in-out">
     <div class="flex z-50 bg-white self-center max-w-[1312px] justify-between w-full p-4">
         <a class="flex group h-16 gap-2 mx-2 no-underline place-content-center items-center place-self-center hover:scale-105 duration-300" href={`${import.meta.env.BASE_URL}`}>
             <svg class="flex h-full w-fit" width="100px" height="100px" viewBox='135 115 730 730'>
@@ -64,7 +64,7 @@ const links=[ //C'est la seule variable à modifier dans le header, le reste se 
 
     </div>
 
-    <div id="menuList" class="absolute xl:hidden translate-y-[-100%] flex-col bg-white w-full p-6 right-0 left-0 top-20 z-40 place-content-center space-y-6 duration-300">
+    <div id="menuList" class="absolute xl:hidden translate-y-[-100%] flex-col bg-white w-full h-screen p-6 right-0 left-0 top-20 z-40 place-content-center space-y-6 duration-300">
         {
             links.map((link) => (
                 <a href={link.href} class="flex rounded-md bg-teal-400 place-content-center self-center p-2 w-full no-underline text-xl text-black font-semibold">{link.title}</a>
