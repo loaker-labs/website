@@ -6,6 +6,6 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react()],
-  //site: 'https://loaker.fr',
-  base: '/website/'
+  site: 'https://loaker.ch',
+  //base: '/website/'
 });
