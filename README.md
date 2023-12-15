@@ -100,17 +100,17 @@ sudo docker login
 ```
 2. Tag the image
 ```bash
-sudo docker tag loakerWebsite jbcol602/loakerWebsite:latest
+sudo docker tag loakerwebsite jbcol602/loakerwebsite:latest
 ```
 3. Push the image
 ```bash
-sudo docker push jbcol602/loakerWebsite:latest
+sudo docker push jbcol602/loakerwebsite:latest
 ```
 
 ### Run the docker image phishing app on the server (docker must be installed)
 pull the image from docker hub
 ```bash
-docker pull jbcol602/loakerWebsite:latest
+docker pull jbcol602/loakerwebsite:latest
 ```
 if you want to remove all the images already on the machine
 ```bash
@@ -118,7 +118,7 @@ docker rmi $(docker images -q) -f
 ```
 launch the image
 ```bash
-docker run -d -p 443:443 jbcol602/loakerWebsite
+docker run -d -p 443:443 -v /dockerlog:/app/server/log jbcol602/loakerwebsite
 ```
 
 ## Some useful docker commands
