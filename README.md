@@ -118,7 +118,7 @@ docker rmi $(docker images -q) -f
 ```
 launch the image
 ```bash
-docker run -d -p 443:443 -v /dockerlog:/app/server/log jbcol602/loakerwebsite
+docker run -d -p 443:443 -v /dockerlog:/app/server/log loakerwebsite
 ```
 
 ## Some useful docker commands

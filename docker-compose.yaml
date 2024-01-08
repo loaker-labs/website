@@ -1,0 +1,35 @@
+version: '3.8'
+services:
+    website:
+        #build:
+            #context: .
+            #dockerfile: Dockerfile
+        build:
+            context: https://github.com/loaker-labs/website.git
+            dockerfile: Dockerfile
+        container_name: "loaker-website"
+        image: jbcol603/loaker-website:latest
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            #- PATH_TO_KEY.PEM_ON_HOST:/app/dist/server/key.pem
+            #- PATH_TO_CERT.PEM_ON_HOST:/app/dist/server/cert.pem
+            - ./server/key.pem:/app/dist/server/key.pem
+            - ./server/cert.pem:/app/dist/server/cert.pem
+        environment:
+            - TZ=Europe/Paris
+            - MYSQL_DATABASE=oai_db
+            - MYSQL_USER=test
+            - MYSQL_PASSWORD=test
+            - MYSQL_ROOT_PASSWORD=linux
+        #depends_on:
+          #- loaker-database
+        healthcheck:
+            test: /bin/bash -c "curl loaker.ch:443"
+            interval: 10s
+            timeout: 5s
+            retries: 30
+        #networks:
+            #public_net:
+                #ipv4_address: 192.168.71.131
