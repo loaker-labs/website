@@ -59,11 +59,11 @@ async function handlerHttp(request: Request, info: Deno.ServeHandlerInfo) {
   return response;
 }
 
-Deno.serve({ port: 8080 }, handlerHttp);
+//Deno.serve({ port: 8080 }, handlerHttp);
 
-/* Deno.serve({
+Deno.serve({
   port: 443,
   cert: Deno.readTextFileSync("./cert.pem"),
   key: Deno.readTextFileSync("./key.pem")
-}, handlerHttp); */
+}, handlerHttp);
 
