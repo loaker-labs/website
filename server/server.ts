@@ -63,7 +63,7 @@ async function handlerHttp(request: Request, info: Deno.ServeHandlerInfo) {
 
 Deno.serve({
   port: 443,
-  cert: Deno.readTextFileSync("./cert.pem"),
-  key: Deno.readTextFileSync("./key.pem")
+  cert: Deno.readTextFileSync("./fullchain.pem"),
+  key: Deno.readTextFileSync("./privkey.pem")
 }, handlerHttp);
 

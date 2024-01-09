@@ -12,20 +12,18 @@ services:
             - "80:80"
             - "443:443"
         volumes:
-            - PATH_TO_KEY.PEM_ON_HOST:/app/dist/server/key.pem
-            - PATH_TO_CERT.PEM_ON_HOST:/app/dist/server/cert.pem
-            #- ./server/key.pem:/app/dist/server/key.pem
-            #- ./server/cert.pem:/app/dist/server/cert.pem
-        environment:
-            - TZ=Europe/Paris
-            - MYSQL_DATABASE=oai_db
-            - MYSQL_USER=test
-            - MYSQL_PASSWORD=test
-            - MYSQL_ROOT_PASSWORD=linux
+            - /etc/letsencrypt/live/loaker.ch/privkey.pem:/app/dist/server/privkey.pem
+            - /etc/letsencrypt/live/loaker.ch/fullchain.pem:/app/dist/server/fullchain.pem
+        #environment:
+            #- TZ=Europe/Paris
+            #- MYSQL_DATABASE=oai_db
+            #- MYSQL_USER=test
+            #- MYSQL_PASSWORD=test
+            #- MYSQL_ROOT_PASSWORD=linux
         #depends_on:
           #- loaker-database
         healthcheck:
-            test: /bin/bash -c "curl loaker.ch:443"
+            test: ["CMD", "curl -Is --max-time 4 https://loaker.ch"]
             interval: 10s
             timeout: 5s
             retries: 30
