@@ -4,6 +4,8 @@ EXPOSE 443
 
 COPY ./dist /app/dist/
 COPY ./server /app/server/
+COPY /etc/letsencrypt/live/loaker.ch/privkey.pem /app/dist/server/privkey.pem
+COPY /etc/letsencrypt/live/loaker.ch/fullchain.pem /app/dist/server/fullchain.pem
 
 RUN apt update && \
     apt-get install -y unzip && \

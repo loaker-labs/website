@@ -2,8 +2,9 @@ version: '3.8'
 services:
     website:
         #build:
-            #context: .
+            #context: github.com/loaker-labs/website.git
             #dockerfile: Dockerfile
+            #ssh:["default"]
         build: https://github.com/loaker-labs/website.git
         container_name: "loaker-website"
         #privileged: true
