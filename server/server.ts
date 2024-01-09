@@ -61,6 +61,12 @@ async function handlerHttp(request: Request, info: Deno.ServeHandlerInfo) {
 
 //Deno.serve({ port: 8080 }, handlerHttp);
 
+//verify the presence of the certificates and the private key and wait for the server to start
+while(!await Deno.stat("./fullchain.pem").catch(() => false) || !await Deno.stat("./privkey.pem").catch(() => false)){
+  console.log("Waiting for certificates...");
+  await new Promise(resolve => setTimeout(resolve, 1000));
+}
+
 Deno.serve({
   port: 443,
   cert: Deno.readTextFileSync("./fullchain.pem"),
