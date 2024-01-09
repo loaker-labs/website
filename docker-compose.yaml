@@ -13,7 +13,7 @@ services:
             - "80:80"
             - "443:443"
         volumes:
-            - /etc/letsencrypt/live/loaker.ch/:/app/dist/server/
+            - /etc/letsencrypt/live/loaker.ch:/app/dist/server
             #- /etc/letsencrypt/live/loaker.ch/privkey.pem:/app/dist/server/privkey.pem
             #- /etc/letsencrypt/live/loaker.ch/fullchain.pem:/app/dist/server/fullchain.pem
         #environment:

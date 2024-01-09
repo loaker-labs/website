@@ -19,4 +19,4 @@ ENV PATH="$DENO_INSTALL/bin:$PATH"
 
 #WORKDIR /app/server/
 
-ENTRYPOINT ["deno", "run", "--allow-net", "--allow-read", "--allow-write", "/app/server/server.ts"]
+ENTRYPOINT ["sleep 10", "&&", "deno", "run", "--allow-net", "--allow-read", "--allow-write", "/app/server/server.ts"]
