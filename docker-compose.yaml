@@ -13,9 +13,9 @@ services:
             - "80:80"
             - "443:443"
         volumes:
-            - /etc/letsencrypt/live/loaker.ch:/app/dist/server
-            #- /etc/letsencrypt/live/loaker.ch/privkey.pem:/app/dist/server/privkey.pem
-            #- /etc/letsencrypt/live/loaker.ch/fullchain.pem:/app/dist/server/fullchain.pem
+            #- /etc/letsencrypt/live/loaker.ch:/app/server/server
+            - /etc/letsencrypt/live/loaker.ch/privkey.pem:/app/server/privkey.pem
+            - /etc/letsencrypt/live/loaker.ch/fullchain.pem:/app/server/fullchain.pem
         #environment:
             #- TZ=Europe/Paris
             #- MYSQL_DATABASE=oai_db
