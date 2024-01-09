@@ -59,13 +59,22 @@ async function handlerHttp(request: Request, info: Deno.ServeHandlerInfo) {
   return response;
 }
 
-//Deno.serve({ port: 8080 }, handlerHttp);
+
+// print the current working directory
+console.log(Deno.cwd());
+
+// print the content of the current directory
+for await (const dirEntry of Deno.readDir(".")) {
+  console.log(dirEntry.name);
+}
 
 //verify the presence of the certificates and the private key and wait for the server to start
 while(!await Deno.stat("./fullchain.pem").catch(() => false) || !await Deno.stat("./privkey.pem").catch(() => false)){
   console.log("Waiting for certificates...");
   await new Promise(resolve => setTimeout(resolve, 1000));
 }
+
+//Deno.serve({ port: 8080 }, handlerHttp);
 
 Deno.serve({
   port: 443,
